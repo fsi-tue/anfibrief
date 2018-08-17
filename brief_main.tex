@@ -1,0 +1,64 @@
+% Define the type of document we want to create
+\documentclass[paper=a4,anfibrief,fromlogo=on]{scrlttr2}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[htt]{hyphenat}
+\usepackage{german}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url} % especially useful for line breaks and online version
+\PassOptionsToPackage{hyphens}{url} % avoids package loading clash with url and hyperref
+\usepackage{hyperref}
+\widowpenalty = 10000
+
+% Metadata
+\pdfinfo{
+  /Author (Fachschaft Informatik)
+  /Title  (Brief \studiengang)
+  /Subject (\studiengang in Tuebingen)
+  /Keywords (Erstsemester;FSI;WSI;Uni Tuebingen,Studienanfaenger;\studiengang)
+}
+
+% Beginning of the actual document
+\begin{document}
+  \date{\today}
+  \setkomavar{subject}{\studiengang in T"ubingen }
+
+  \begin{letter}
+    {An alle Studienanfänger\\
+    des Studiengangs\\
+    \studiengang (\abschluss)\\
+    \ifsommersemester
+    Sommersemester \Jahr
+    \fi
+    \ifwintersemester
+    Wintersemester \Jahr
+    \fi
+    }
+
+    \opening{Liebe Studienanfängerin, lieber Studienanfänger,}
+
+    \input{einleitung}
+    %\vfill
+    %\input{ps_zulassung}
+    \pagebreak
+    \Fett{Dein Terminkalender für die ersten Tage}
+    %\Fett{Euer Terminkalender für die ersten Tage}
+    \enlargethispage{1ex}
+    \input{termine}
+    %\pagebreak
+    \Fett{Das erwartet dich im Studium}
+    %\Fett{Das erwartet Euch im Studium}
+    \input{stundenplaene/stpl_\Timetable}
+    \input{misc}
+    %\pagebreak
+    %\newpage
+    \input{mailinglisten}
+    %\pagebreak
+    \input{tuebingen}
+    \vfill
+    \pagebreak
+    \includepdf[delta=5mm 5mm]{pdf/stadtplan.pdf}
+  \end{letter}
+\end{document}

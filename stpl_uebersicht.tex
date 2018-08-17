@@ -1,0 +1,38 @@
+\documentclass[10pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{german}
+\typearea{11}
+\setcounter{secnumdepth}{0}
+
+\input{brief_init}
+
+\begin{document}
+
+\ifwintersemester
+\section{Übersicht Stundenpläne}
+\subsection{Informatik}
+\input{stundenplaene/stpl_informatik-bsc}
+\subsection{Bioinformatik}
+\input{stundenplaene/stpl_bioinfo-bsc}
+\pagebreak
+\subsection{Medieninformatik}
+\input{stundenplaene/stpl_medieninfo-bsc}
+\subsection{Kognitionswissenschaft}
+\input{stundenplaene/stpl_kogwiss-bsc}
+\subsection{Medizininformatik}
+\input{stundenplaene/stpl_medizininfo-bsc}
+
+\subsection{Lehramt Info}
+\input{stundenplaene/stpl_informatik-lehramt}
+\fi
+
+\ifsommersemester
+\section{Übersicht Stundenpläne}
+\subsection{Informatik}
+\input{stundenplaene/stpl_informatik-bsc_SS}
+\subsection{Bioinformatik}
+\input{stundenplaene/stpl_bioinfo-bsc_SS}
+\fi
+
+
+\end{document}

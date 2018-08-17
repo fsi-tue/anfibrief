@@ -1,0 +1,126 @@
+\ProvidesFile{unibrief.lco}[2010/09/01 lco (Fakultät)]
+\KOMAoptions{fontsize=11pt, foldmarks=BmT, parskip=half, fromrule=no, pagenumber=botleft, backaddress=plain}
+
+\usepackage{xcolor}
+\definecolor{navy}{RGB}{0, 0, 128}
+
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{berasans}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fontawesome} % Icons in Adresskopf
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{geometry}
+\usepackage{totpages}
+\usepackage{setspace}
+\usepackage{microtype}
+\RequirePackage{graphicx}
+\geometry{a4paper, top=32mm, left=20mm, right=18mm, bottom=30mm, headsep=10mm, footskip=12mm}
+\@setplength{firstheadvpos}{10mm}
+\@setplength{locvpos}{15mm}
+\@setplength{lochpos}{10mm}
+\@setplength{locwidth}{50mm}
+\@setplength{locheight}{90mm}
+\@setplength{refvpos}{108mm}
+
+\renewcommand*{\raggedsignature}{\raggedright}
+%\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
+%\addtolength{\oddsidemargin}{-1in}
+\newcommand{\seticon}[1]{\textcolor{navy}{\csname #1\endcsname}}
+
+\setkomavar{place}{\hskip -5pt plus -1fill Tübingen}
+
+\newkomavar{az}
+\newkomavar{prof}
+\newkomavar{abteilung}
+\newkomavar{funktion}
+\newkomavar{bus}
+\newkomavar{anfax}
+
+\if@fax%
+  \@setplength{backaddrheight}{10mm}
+  \@setplength{toaddrvpos}{40mm}
+  \setkomavar{backaddress}{\parbox{5cm}{\Huge Telefax\\ \\ \normalsize \textbf{\usekomavar{anfax}} \\ \pageref{TotPages} Seite/n }}
+ %\setkomavar{backaddressseparator}{\\}
+\else%
+  \setkomavar{backaddress}{\textbf{Universität Tübingen}\\ \usekomavar{fromaddress}}
+  \setkomavar{backaddressseparator}{~{$\cdot$}~}
+\fi%
+
+
+\setkomavar{placeseparator}{, den }
+\setkomavar{date}{\today}
+\setkomavar{phoneseparator}{}
+\firstfoot{\footnotesize\textbf{Allgemeine bzw. spezifische formale Angaben (Rektor, Sprecher, Bankverbindung, etc.)}}
+
+% Beispiel Fusszeile
+% http://www.komascript.de/exampleunikonstanz
+\firstfoot{\scriptsize
+%  \rlap{%
+  \begin{tabular}{@{}l@{}}
+    Busverbindungen\\
+    \usekomavar{bus}\\
+  \end{tabular}%
+%  }\null
+  \hfill
+  \begin{tabular}{@{}l@{}}
+    Paketanschrift\\
+    \usekomavar{fromaddress}\\
+  \end{tabular}%
+  \hfill
+%  \llap{%
+  \begin{tabular}{@{}l@{}}
+    \usekomavar*{frombank}\\
+    \usekomavar{frombank}\\
+  \end{tabular}
+%  }\null
+}
+
+\firsthead{%
+\parbox{\textwidth}{%
+\ifpdf%
+  \if@logo%
+    \includegraphics[width=85mm, keepaspectratio=true]{logos/fsilogo.pdf}%
+  \else%
+    \includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
+ \fi%
+\else%
+  \if@logo%
+    \includegraphics[width=78mm,
+                     keepaspectratio=true]{logo.eps}%
+  \else%
+    \includegraphics[width=78mm,
+                     keepaspectratio=true]{logo_sw.eps}%
+  \fi%
+\fi%
+}}
+
+\nexthead{}
+\nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+\pagestyle{headings}
+
+\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
+\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
+\setkomavar{location}{\large\setstretch{1.20}%
+  \textbf{\if@logo\color{navy}\fi%
+Universität Tübingen}\par\medskip
+  \setstretch{1.1}\footnotesize%
+  \textbf{\if@logo\color{navy}\fi%
+Fachbereich Informatik\\
+(Wilhelm-Schickard-Institut)\\
+~\\
+Fachschaft Informatik}\\
+  \\
+  \seticon{faPhone} \quad +49 7071 29-70413 \\
+  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
+  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
+  \\ 
+  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
+  \hspace*{1em}\quad 72076 Tübingen
+}
+
+\firstfoot{}
+
+\endinput

@@ -1,0 +1,32 @@
+% Custom commands
+\newcommand{\Fett}[1]{{\Large \bfseries #1}\\}
+\newcommand{\fett}[1]{{\large \bfseries #1}\\}
+\newcommand{\At}{\textcircled{$\alpha$}}	%% E-Mail-Obfuscator
+%\newcommand{\At}{@}
+
+% Flags (conditionals)
+% They all default to false
+\newif\ifmaster % Master?
+\masterfalse
+\newif\ifbachelor % Bachelor?
+\bachelorfalse
+\newif\ifkogwiss %% Flag für kogwiss-extrakram
+\kogwissfalse
+\newif\iflehramt % Lehramt
+\lehramtfalse
+\newif\ifinfo % Info
+\infofalse
+\newif\ifbinfo % Bioinfo
+\binfofalse
+\newif\ifmedinfo % Medizininfo
+\medinfofalse
+\newif\ifsommersemester % Sommersemester?
+\sommersemesterfalse
+\newif\ifwintersemester % Wintersemester?
+\wintersemesterfalse
+
+% Import some relevant variables from the Makefile
+\input{env}
+
+% Load the current configuration
+\input{config}
