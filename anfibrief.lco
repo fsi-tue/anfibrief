@@ -53,30 +53,7 @@
 \setkomavar{placeseparator}{, den }
 \setkomavar{date}{\today}
 \setkomavar{phoneseparator}{}
-\firstfoot{\footnotesize\textbf{Allgemeine bzw. spezifische formale Angaben (Rektor, Sprecher, Bankverbindung, etc.)}}
-
-% Beispiel Fusszeile
-% http://www.komascript.de/exampleunikonstanz
-\firstfoot{\scriptsize
-%  \rlap{%
-  \begin{tabular}{@{}l@{}}
-    Busverbindungen\\
-    \usekomavar{bus}\\
-  \end{tabular}%
-%  }\null
-  \hfill
-  \begin{tabular}{@{}l@{}}
-    Paketanschrift\\
-    \usekomavar{fromaddress}\\
-  \end{tabular}%
-  \hfill
-%  \llap{%
-  \begin{tabular}{@{}l@{}}
-    \usekomavar*{frombank}\\
-    \usekomavar{frombank}\\
-  \end{tabular}
-%  }\null
-}
+\setkomavar{firstfoot}{} % Fusszeile erste Seite
 
 \firsthead{%
 \parbox{\textwidth}{%
@@ -97,8 +74,21 @@
 \fi%
 }}
 
-\nexthead{}
-\nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+\setkomavar{nexthead}{} 
+%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fsi.uni-tuebingen.de}
+% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+\setkomavar{nextfoot}{
+\parbox[t]{0.5\textwidth}{
+\footnotesize \flushleft \upshape 
+Seite \thepage/\pageref{TotPages}
+}
+\parbox[t]{0.5\textwidth}{
+\footnotesize \flushright \upshape 
+\url{https://www.fsi.uni-tuebingen.de} \\
+\href{mailto:fsi@fsi.uni-tuebingen.de}{\nolinkurl{fsi@fsi.uni-tuebingen.de}}
+}
+}% end nextfoot
+
 \pagestyle{headings}
 
 \setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
@@ -121,6 +111,6 @@ Fachschaft Informatik}\\
   \hspace*{1em}\quad 72076 Tübingen
 }
 
-\firstfoot{}
+% \firstfoot{}
 
 \endinput
