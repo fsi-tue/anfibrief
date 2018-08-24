@@ -134,14 +134,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.28"
-     inkscape:cx="118.24539"
-     inkscape:cy="65.425655"
+     inkscape:zoom="5.8548441"
+     inkscape:cx="578.62385"
+     inkscape:cy="766.16083"
      inkscape:document-units="px"
      inkscape:current-layer="layer8"
-     inkscape:window-width="2560"
-     inkscape:window-height="1383"
-     inkscape:window-x="1920"
+     inkscape:window-width="1920"
+     inkscape:window-height="1023"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -2949,14 +2949,19 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="528.45398"
-       y="296.62259"
+       x="532.724"
+       y="295.08542"
        id="text8265"
        sodipodi:linespacing="100%"><tspan
-         y="296.62259"
-         x="528.45398"
+         y="295.08542"
+         x="532.724"
          sodipodi:role="line"
-         id="tspan8267">Seminarräume</tspan></text>
+         id="tspan8267">Seminarräume</tspan><tspan
+         y="300.89581"
+         x="532.724"
+         sodipodi:role="line"
+         id="tspan4112"
+         style="font-size:5px">(A104, A301, A302)</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
        d="m 526.80529,262.02515 5.5627,-9.23285"
@@ -2964,8 +2969,8 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0" />
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
-       d="m 560.36056,298.34757 42.9044,30.52014"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.83419245px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 569.58244,302.71052 34.3311,26.54197"
        id="path8283"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0" />
