@@ -1,2 +1,29 @@
-out/
+# Don't you dare!
+# One does not simply "git add" build artifacts...
+/out
+/pdf
+/final
+*.pdf
+
+# TODO: Is this still required?
 auto/
+
+# Just in case (not everyone knows how to use make...)
+# Ignores all auxiliary files from LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.toc
+*.out
+*.synctex.gz
+
+# Editor files (Vim, Emacs and others)
+*.swp
+*~
+
+# OS specific files (Windows & macOS)
+Thumbs.db
+*.DS_Store
