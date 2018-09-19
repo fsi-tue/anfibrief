@@ -1,6 +1,6 @@
 # Makefile für die Anfibriefe
 # Fix fuer Ubuntu-User, bei denen anstatt bash dash verwendet wird
-SHELL := /bin/bash
+SHELL := /usr/bin/env bash
 # Diese Variablen sollten für die aktuelle Version stimmen, müssen aber ggf.
 # angepasst werden (am besten über Shell-Variablen, z. B. "export YEAR=2017"
 # und "unset YEAR" zum Zurücksetzen):
