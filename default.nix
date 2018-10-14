@@ -9,7 +9,14 @@ stdenv.mkDerivation rec {
 
   src = ./.;
 
-  nativeBuildInputs = [ texlive.combined.scheme-full inkscape pdftk ];
+  nativeBuildInputs = [ inkscape pdftk
+    (texlive.combine {
+      inherit (texlive) scheme-minimal latexmk latexconfig latex koma-script
+        graphics german xcolor bera collection-fontsrecommended fontawesome
+        geometry oberdiek totpages ms setspace microtype hyphenat pdfpages tools
+        url hyperref;
+    })
+  ];
 
   postPatch = ''
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
