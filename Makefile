@@ -14,7 +14,7 @@ LETTERDIR = briefe
 MISCDIR = misc
 TIMETABLEDIR = stundenplaene
 OUTDIR = out
-PDFDIR = pdf
+PDFDIR ?= pdf
 RELEASEDIR = final
 
 # Test ob Inkscape installiert ist
