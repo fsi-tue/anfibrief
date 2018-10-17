@@ -145,12 +145,22 @@ endif
 info:
 	@echo 'Year: $(YEAR)'
 	@echo 'Semester: $(SEMESTER) (brought forward by two months)'
+ifndef INKSCAPE
+	@echo 'Warning: Inkscape is missing!'
+else
+	@echo 'Inkscape is installed.'
+endif
 	@echo 'Output directory (for auxiliary files): $(OUTDIR)'
 	@echo 'PDF directory: $(PDFDIR)'
 	@echo 'Release directory: $(RELEASEDIR)'
 	@echo 'Plans: $(PLAENE)'
 	@echo 'Sommersemester: $(SOMMERSEMESTER)'
 	@echo 'Wintersemester: $(WINTERSEMESTER)'
+	@echo 'Other directories:'
+	@echo '- LaTeX source files: $(SRCDIR)'
+	@echo '- Media files: $(MEDIADIR)'
+	@echo '- Letters (sources): $(LETTERDIR)'
+	@echo '- Timetables (sources): $(TIMETABLEDIR)'
 
 .PHONY: help
 help:
