@@ -8,6 +8,13 @@ YEAR ?= $(shell date '+%Y')
 # Das Semester ist um 2 Monate nach vorne verschoben, da wir die Briefe ja vor
 # dem entsprechenden Semester aktualisieren wollen.
 SEMESTER ?= $(shell if [[ $$(date +%m) > 02 && $$(date +%m) < 07 ]]; then echo SS; else echo WS; fi)
+ifeq ($(SEMESTER),WS)
+  ApplySemester = \\wintersemestertrue
+else ifeq ($(SEMESTER),SS)
+  ApplySemester = \\sommersemestertrue
+else
+  ApplySemester = \\error
+endif
 
 # Variablen für die Build-Ordner
 SRCDIR = src
@@ -50,7 +57,7 @@ env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}
 .PHONY: env-update
 env-update:
 	@$(call env-replace,YEAR)
-	@$(call env-replace,SEMESTER)
+	@$(call env-replace,ApplySemester)
 	@$(call env-replace,LETTERDIR)
 	@$(call env-replace,TIMETABLEDIR)
 
