@@ -13,7 +13,6 @@ SEMESTER ?= $(shell if [[ $$(date +%m) > 02 && $$(date +%m) < 07 ]]; then echo S
 SRCDIR = src
 MEDIADIR = media
 LETTERDIR = briefe
-MISCDIR = misc
 TIMETABLEDIR = stundenplaene
 OUTDIR = out
 PDFDIR ?= pdf
@@ -53,7 +52,6 @@ env-update:
 	@$(call env-replace,YEAR)
 	@$(call env-replace,SEMESTER)
 	@$(call env-replace,LETTERDIR)
-	@$(call env-replace,MISCDIR)
 	@$(call env-replace,TIMETABLEDIR)
 
 # Mit diesem Target lassen sich die Stundenpläne und der Stadtplan erstellen
