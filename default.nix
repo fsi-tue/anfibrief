@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   postPatch = ''
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
-    sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," brief_main.tex
+    sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," src/brief_main.tex
   '';
 
   buildPhase = ''

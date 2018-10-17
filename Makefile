@@ -10,6 +10,8 @@ YEAR ?= $(shell date '+%Y')
 SEMESTER ?= $(shell if [[ $$(date +%m) > 02 && $$(date +%m) < 07 ]]; then echo SS; else echo WS; fi)
 
 # Variablen für die Build-Ordner
+SRCDIR = src
+MEDIADIR = media
 LETTERDIR = briefe
 MISCDIR = misc
 TIMETABLEDIR = stundenplaene
@@ -39,8 +41,8 @@ all: wintersemester
 
 # A variable that later acts as a user-defined function
 # "(call variable,parameter)"
-env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' env.tex ||\
-	sed --regexp-extended --in-place 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' env.tex
+env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
+	sed --regexp-extended --in-place 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
 # A little (possibly dirty) hack to execute the env-update target every time at
 # the beginning. This target updates the LaTeX variables in env.tex but only
 # modifies the file if they actually differ (modifying the file causes the
@@ -65,28 +67,28 @@ wintersemester: $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(WINTERSEMESTER)))
 
 # Mit diesem Target lässt sich eine Übersicht über die Stundenpläne erstellen
 #stundenplan: $(PDFDIR)/stpl_uebersicht.pdf # Alias
-$(PDFDIR)/stpl_uebersicht.pdf: stpl_uebersicht.tex stpl_*.tex
+$(PDFDIR)/stpl_uebersicht.pdf: $(SRCDIR)/stpl_uebersicht.tex $(TIMETABLEDIR)/stpl_*.tex
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 	latexmk -output-directory=$(OUTDIR) -pdf -pdflatex="pdflatex" $<
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi
-	mv $(OUTDIR)/$(<:.tex=.pdf) $(PDFDIR)/$(<:.tex=.pdf)
+	mv $(OUTDIR)/$(notdir $(<:.tex=.pdf)) $(PDFDIR)/$(notdir $(<:.tex=.pdf))
 
 # Mit diesem Target lässt sich der Stadtplan erstellen
 #stadtplan: $(PDFDIR)/stadtplan.pdf # Alias
-$(PDFDIR)/stadtplan.pdf: stadtplan.svg stadtplan.info
+$(PDFDIR)/stadtplan.pdf: $(MEDIADIR)/stadtplan.svg $(MEDIADIR)/stadtplan.info
 ifndef INKSCAPE
 	$(warning Inkscape is missing! Skipping $@)
 else
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
-	inkscape -C -T stadtplan.svg -A $(OUTDIR)/stadtplan.tmp
+	inkscape -C -T $(MEDIADIR)/stadtplan.svg -A $(OUTDIR)/stadtplan.tmp
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi
-	pdftk $(OUTDIR)/stadtplan.tmp update_info stadtplan.info output $(PDFDIR)/stadtplan.pdf
+	pdftk $(OUTDIR)/stadtplan.tmp update_info $(MEDIADIR)/stadtplan.info output $(PDFDIR)/stadtplan.pdf
 endif
 
 # Mit diesem Target lässt sich ein bestimmter Brief erstellen
 # TODO: Dropped "stpl_%_$(SEMESTER).tex" from the prerequisites since some
 # timetables are missing. stundenplaene/stpl_%_$(YEAR)-$(SEMESTER).tex
-$(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex termine.tex misc.tex einleitung.tex logos/fsilogo.pdf config.tex mailinglisten.tex tuebingen.tex ps_zulassung.tex env.tex
+$(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex $(MEDIADIR)/fsilogo.pdf $(addprefix $(SRCDIR)/,termine.tex misc.tex einleitung.tex config.tex mailinglisten.tex tuebingen.tex ps_zulassung.tex env.tex)
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 	latexmk -output-directory=$(OUTDIR) -pdf -pdflatex="pdflatex" $<
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi

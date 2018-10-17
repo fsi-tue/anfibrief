@@ -3,6 +3,7 @@
 /out
 /pdf
 /final
+/result
 *.pdf
 
 # TODO: Is this still required?

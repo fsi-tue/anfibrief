@@ -1,5 +1,5 @@
 % Define the type of document we want to create
-\documentclass[paper=a4,anfibrief,fromlogo=on]{scrlttr2}
+\documentclass[paper=a4,media/anfibrief,fromlogo=on]{scrlttr2}
 
 % Packages
 \usepackage[utf8]{inputenc}
@@ -40,25 +40,25 @@
 
     \opening{Liebe Studienanfängerin, lieber Studienanfänger,}
 
-    \input{einleitung}
+    \input{src/einleitung}
     %\vfill
-    %\input{ps_zulassung}
+    %\input{src/ps_zulassung}
     \pagebreak
     \Fett{Dein Terminkalender für die ersten Tage}
     %\Fett{Euer Terminkalender für die ersten Tage}
     \enlargethispage{1ex}
-    \input{termine}
+    \input{src/termine}
     %\pagebreak
     \Fett{Das erwartet dich im Studium}
     %\Fett{Das erwartet Euch im Studium}
     \input{stundenplaene/stpl_\Timetable}
-    \input{misc}
+    \input{src/misc}
     ~\\\\
     %\pagebreak
     %\newpage
-    \input{mailinglisten}
+    \input{src/mailinglisten}
     %\pagebreak
-    \input{tuebingen}
+    \input{src/tuebingen}
     \vfill
     \pagebreak
     \includepdf[delta=5mm 5mm]{pdf/stadtplan.pdf}

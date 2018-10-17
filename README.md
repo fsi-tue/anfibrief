@@ -35,22 +35,22 @@ folgenden Dinge erledigt werden:
 
 ## Wo ist was?
 Die Briefe der einzelnen Studiengänge setzen sich zusammen aus:
-- `anfibrief.lco`, diese Datei defineirt den Briefkopf und das Seitenlayout sowie die Fußzeile.
-- `config.tex`, hier werden grundsätzliche Infos die in jedem Brief vorkommen gesetzt, z.B. Info- und Mathe-Profs sowie der Preis des Semestertickets.
-- `brief_main.tex`, hier wird das Hauptdokument definert und die einzelnen Abschnitte werden eingebunden.
-- `brief_init.tex`, hier werden die `if`-Statements für die einzelnen Briefe definiert und auf false gesetzt. **Diese Datei nicht verändern!** (Es sei denn, ihr legt einen neuen Studiengang an.)
-- `briefe/brief_<studiengang.tex>`, hier werden im Prinzip nur Variablen gesetzt, die die Platzhalter in der Datei `brief_main.tex` ersetzen.
-- `stundenplaene/stpl_<studiengang.tex>`, hier wird die Sektion "Das erwartet dich im Studium" definiert, wichtig ist hier vor allem die Tabelle mit dem Stundenplan.
+- `media/anfibrief.lco`, diese Datei defineirt den Briefkopf und das Seitenlayout sowie die Fußzeile.
+- `src/config.tex`, hier werden grundsätzliche Infos die in jedem Brief vorkommen gesetzt, z.B. Info- und Mathe-Profs sowie der Preis des Semestertickets.
+- `src/brief_main.tex`, hier wird das Hauptdokument definert und die einzelnen Abschnitte werden eingebunden.
+- `src/brief_init.tex`, hier werden die `if`-Statements für die einzelnen Briefe definiert und auf false gesetzt. **Diese Datei nicht verändern!** (Es sei denn, ihr legt einen neuen Studiengang an.)
+- `briefe/brief_<studiengang>.tex`, hier werden im Prinzip nur Variablen gesetzt, die die Platzhalter in der Datei `brief_main.tex` ersetzen.
+- `stundenplaene/stpl_<studiengang>.tex`, hier wird die Sektion "Das erwartet dich im Studium" definiert, wichtig ist hier vor allem die Tabelle mit dem Stundenplan.
 
 |Überschrift|Datei|
 |-----------|-----|
-|"Dein Terminkalender für die ersten Tage"|`termine.tex`|
-|"Das erwartet dich im Studium"|`stpl_<Studiengang>.tex`|
-|"Die Anfangszeiten und Orte"|`misc.tex`|
-|"Die Informatik-Vorlesung"|`misc.tex`|
-|"Mailinglisten"|`mailinglisten.tex`|
-|"Verkehr in Tübingen"|`tuebingen.tex`|
-|"Wohnen in Tübingen"|`tuebingen.tex`|
-|Stadtplan|`stadtplan.svg`|
+|"Dein Terminkalender für die ersten Tage"|`src/termine.tex`|
+|"Das erwartet dich im Studium"|`stundenplaene/stpl_<studiengang>.tex`|
+|"Die Anfangszeiten und Orte"|`src/misc.tex`|
+|"Die Informatik-Vorlesung"|`src/misc.tex`|
+|"Mailinglisten"|`src/mailinglisten.tex`|
+|"Verkehr in Tübingen"|`src/tuebingen.tex`|
+|"Wohnen in Tübingen"|`src/tuebingen.tex`|
+|Stadtplan|`media/stadtplan.svg`|
 
 - Wichtig: Der Stadtplan wird automatisiert in eine PDF umgewandelt und an die Briefe gehängt. Den Stadtplan nur mit Inkscape bearbeiten, Illustrator o.ä. sorgen für seltsame Fehler im Makefile.
