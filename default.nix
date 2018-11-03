@@ -2,10 +2,20 @@
 
 with import nixpkgs {};
 
-stdenv.mkDerivation rec {
+let
+  unixTime = builtins.currentTime;
+  yearSeconds = 31556926;
+  monthSeconds = 2629743;
+  daySeconds = 86400;
+  yearDelta = unixTime / yearSeconds;
+  monthDelta = (unixTime - yearDelta*yearSeconds) / monthSeconds;
+  dayDelta = (unixTime - yearDelta*yearSeconds - monthDelta*monthSeconds) / daySeconds;
+  year = yearDelta + 1970;
+  month = monthDelta + 1;
+  day = dayDelta + 1;
+in stdenv.mkDerivation rec {
   name = "anfibrief-${toString version}";
-  # TODO: We might want to use YYYY-MM-DD
-  version = builtins.currentTime;
+  version = "${toString year}-${toString month}-${toString day}";
 
   src = ./.;
 
