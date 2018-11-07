@@ -1,23 +1,18 @@
-{ nixpkgs ? <nixpkgs> }:
+{ nixpkgs ? <nixpkgs>
+# Run "nix-build --argstr date YYYY-MM-DD" to reproduce a build:
+, date ? null
+}:
 
 with import nixpkgs {};
 
-let
-  unixTime = builtins.currentTime;
-  yearSeconds = 31556926;
-  monthSeconds = 2629743;
-  daySeconds = 86400;
-  yearDelta = unixTime / yearSeconds;
-  monthDelta = (unixTime - yearDelta*yearSeconds) / monthSeconds;
-  dayDelta = (unixTime - yearDelta*yearSeconds - monthDelta*monthSeconds) / daySeconds;
-  year = yearDelta + 1970;
-  month = monthDelta + 1;
-  day = dayDelta + 1;
-in stdenv.mkDerivation rec {
-  name = "anfibrief-${toString version}";
-  version = "${toString year}-${toString month}-${toString day}";
+stdenv.mkDerivation rec {
+  name = "anfibrief-${version}";
+  version = if (date != null)
+    then date
+    else lib.fileContents
+      (runCommand "anfibrief-date" {} "date --utc +'%F' > $out");
 
-  src = ./.;
+  src = lib.cleanSource ./.;
 
   nativeBuildInputs = [ inkscape pdftk
     (texlive.combine {
@@ -29,6 +24,13 @@ in stdenv.mkDerivation rec {
   ];
 
   postPatch = ''
+    # Set SOURCE_DATE_EPOCH to make the build reproducible:
+    export SOURCE_DATE_EPOCH="$(date --date=$version +'%s')"
+    # Override the LaTeX values for \today:
+    sed -i "s,\\year=\\year,\\year=$(date --date=$version +'%Y')," src/env.tex
+    sed -i "s,\\month=\\month,\\month=$(date --date=$version +'%m')," src/env.tex
+    sed -i "s,\\day=\\day,\\day=$(date --date=$version +'%d')," src/env.tex
+    # Changes for the Nix build:
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
     sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," src/brief_main.tex
   '';

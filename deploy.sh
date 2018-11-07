@@ -21,6 +21,12 @@ YXlkTXlmbgo="
 mkdir -p ~/.ssh
 echo ${KNOWN_HOSTS} | base64 -d >> ~/.ssh/known_hosts
 echo "${SSH_KEY}" | base64 -d >> /tmp/id_rsa
-echo -e "put result/*\nchmod 644 *.pdf" | \
+cat <<EOF > build-information
+Commit: $TRAVIS_COMMIT
+Source date: $(date --date=@$(git log -1 --pretty=%ct) +%F)
+Build date: $(date --utc +'%F')
+Nixpkgs commit: $(cat ~/.nix-defexpr/channels/nixpkgs/.git-revision)
+EOF
+echo -e "put result/*\nput build-information\nchmod 644 *" | \
   sftp -i /tmp/id_rsa "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
 rm /tmp/id_rsa

@@ -1,5 +1,6 @@
 sudo: false
 language: nix
+script: nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)"
 
 deploy:
   skip_cleanup: true
