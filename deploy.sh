@@ -7,7 +7,7 @@ umask 0077
 
 SFTP_USER="anfibrief-cd"
 HOST="teri.fsi.uni-tuebingen.de"
-TARGET_DIRECTORY="public_html"
+TARGET_DIRECTORY="www"
 KNOWN_HOSTS="
 dGVyaS5mc2kudW5pLXR1ZWJpbmdlbi5kZSBzc2gtcnNhIEFBQUFCM056YUMxeWMyRUFBQUFEQVFB\
 QkFBQUJBUUR2Zi9ZWExUOGUrT0ZKUGlDbEJoZnlsQ2NhQmsvTGR0YkFETm5YZk5Hczd0R2UxWVZU\
@@ -27,6 +27,12 @@ Source date: $(date --date=@$(git log -1 --pretty=%ct) +%F)
 Build date: $(date --utc +'%F')
 Nixpkgs commit: $(cat ~/.nix-defexpr/channels/nixpkgs/.git-revision)
 EOF
-echo -e "put result/*\nput build-information\nchmod 644 *" | \
-  sftp -i /tmp/id_rsa "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
+cat <<EOF > sftp-commands
+ls -al
+-rm *
+put result/*
+put build-information
+chmod 644 *
+EOF
+sftp -i /tmp/id_rsa -b sftp-commands "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
 rm /tmp/id_rsa
