@@ -69,3 +69,20 @@ Die Briefe der einzelnen Studiengänge setzen sich zusammen aus:
 - Wichtig: Der Stadtplan wird automatisiert in eine PDF umgewandelt und an die
   Briefe gehängt. Den Stadtplan nur mit Inkscape bearbeiten, Illustrator o.ä.
   sorgen für seltsame Fehler im Makefile.
+
+## Private Subversion history
+
+FSI members can also obtain the private history from Subversion by issuing the
+following 3 commands inside of this repository (`git-svn` must be installed):
+
+```bash
+git svn init --stdlayout --prefix=svn/ https://projects.fsi.uni-tuebingen.de/svn/anfibrief
+# The following requires an FSI SVN account and will take quite a few minutes:
+git svn fetch
+# Last revision:
+# r262 = b355af9fa399ff559e379a4f1ffb8d37d6ee2069 (refs/remotes/svn/trunk)
+git replace --graft 04ba800db821516ff044d0e7d72ca32c82196d91 b355af9fa399ff559e379a4f1ffb8d37d6ee2069
+```
+
+Git can then be used exactly like before but `git-log`, `git-blame`, etc. will
+be aware of the full history.
