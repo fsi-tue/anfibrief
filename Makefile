@@ -32,9 +32,9 @@ INKSCAPE := $(shell inkscape --version 2> /dev/null)
 PLAENE = stpl_uebersicht stadtplan
 
 # Zum SS koennen Info, Bioinfo sowie alle Master begonnen werden
-SOMMERSEMESTER = $(PLAENE) brief_informatik-bsc brief_bioinfo-bsc brief_informatik-msc brief_bioinfo-msc brief_medieninfo-msc brief_medizininfo-msc brief_kogwiss-msc
+SOMMERSEMESTER = $(PLAENE) brief_informatik-bsc brief_bioinfo-bsc brief_informatik-msc brief_bioinfo-msc brief_medieninfo-msc brief_medizininfo-msc brief_kogwiss-msc brief_informatik-lehramt
 # Zum WS kann man das aus dem SS beginnen plus zulassungsbeschraenkte Studiengaenge
-WINTERSEMESTER = $(SOMMERSEMESTER) brief_medieninfo-bsc brief_medizininfo-bsc brief_kogwiss-bsc brief_informatik-lehramt
+WINTERSEMESTER = $(SOMMERSEMESTER) brief_medieninfo-bsc brief_medizininfo-bsc brief_kogwiss-bsc
 
 # Nur im Wintersemester müssen alle Briefe erstellt werden
 ifeq ($(SEMESTER),WS)
