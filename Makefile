@@ -27,6 +27,8 @@ RELEASEDIR = final
 
 # Test ob Inkscape installiert ist
 INKSCAPE := $(shell inkscape --version 2> /dev/null)
+# Test ob pdftk installiert ist
+PDFTK := $(shell pdftk --version 2> /dev/null)
 
 # Liste was wo erstellt werden soll:
 PLAENE = stpl_uebersicht stadtplan
@@ -83,11 +85,19 @@ $(PDFDIR)/stpl_uebersicht.pdf: $(SRCDIR)/stpl_uebersicht.tex $(TIMETABLEDIR)/stp
 $(PDFDIR)/stadtplan.pdf: $(MEDIADIR)/stadtplan.svg $(MEDIADIR)/stadtplan.info
 ifndef INKSCAPE
 	$(warning Inkscape is missing! Skipping $@)
+	# Generate an empty PDF document for the rest of the build process:
+	echo '\shipout\hbox{}\end' | pdftex && mv texput.pdf $(PDFDIR)/stadtplan.pdf
 else
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 	inkscape -C -T $(MEDIADIR)/stadtplan.svg -A $(OUTDIR)/stadtplan.tmp
+  ifndef PDFTK
+	$(warning pdftk is missing! Skipping $@)
+	# Generate an empty PDF document for the rest of the build process:
+	echo '\shipout\hbox{}\end' | pdftex && mv texput.pdf $(PDFDIR)/stadtplan.pdf
+  else
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi
 	pdftk $(OUTDIR)/stadtplan.tmp update_info $(MEDIADIR)/stadtplan.info output $(PDFDIR)/stadtplan.pdf
+  endif
 endif
 
 # Mit diesem Target lässt sich ein bestimmter Brief erstellen
@@ -150,10 +160,16 @@ endif
 info:
 	@echo 'Year: $(YEAR)'
 	@echo 'Semester: $(SEMESTER) (brought forward by two months)'
+	@echo 'Tools required for stadtplan.pdf (optional):'
 ifndef INKSCAPE
-	@echo 'Warning: Inkscape is missing!'
+	@echo '- Warning: Inkscape is missing!'
 else
-	@echo 'Inkscape is installed.'
+	@echo '- Inkscape is installed.'
+endif
+ifndef PDFTK
+	@echo '- Warning: pdftk is missing!'
+else
+	@echo '- pdftk is installed.'
 endif
 	@echo 'Output directory (for auxiliary files): $(OUTDIR)'
 	@echo 'PDF directory: $(PDFDIR)'
