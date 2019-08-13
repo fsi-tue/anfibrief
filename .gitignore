@@ -1,10 +1,10 @@
 # Don't you dare!
 # One does not simply "git add" build artifacts...
+# Please only finished pdfs for linking purpose
 /out
-/pdf
 /final
 /result
-*.pdf
+
 
 # TODO: Is this still required?
 auto/
