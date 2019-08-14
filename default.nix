@@ -32,7 +32,8 @@ stdenv.mkDerivation rec {
     sed -i "s,\\day=\\day,\\day=$(date --date=$version +'%d')," src/env.tex
     # Changes for the Nix build:
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
-    sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," src/brief_main.tex
+    sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," \
+      src/brief_main.tex src/brief_main_en.tex
   '';
 
   buildPhase = ''
