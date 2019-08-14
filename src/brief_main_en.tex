@@ -1,0 +1,65 @@
+% Define the type of document we want to create
+\documentclass[paper=a4,media/anfibrief,fromlogo=on]{scrlttr2}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[htt]{hyphenat}
+\usepackage{german}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{eurosym}
+\usepackage{url} % especially useful for line breaks and online version
+\PassOptionsToPackage{hyphens}{url} % avoids package loading clash with url and hyperref
+\usepackage{hyperref}
+\widowpenalty = 10000
+
+% Metadata
+\pdfinfo{
+  /Author (Fachschaft Informatik)
+  /Title  (Brief \studiengang)
+  /Subject (\studiengang in Tuebingen)
+  /Keywords (Erstsemester;FSI;WSI;Uni Tuebingen,Studienanfaenger;\studiengang)
+}
+
+% Beginning of the actual document
+\begin{document}
+  \date{\today}
+  \setkomavar{subject}{\studiengang in T"ubingen }
+
+  \begin{letter}
+    {To all first-year students of\\
+    \studiengang (\abschluss)\\
+    \ifsommersemester
+    summer semester \YEAR
+    \fi
+    \ifwintersemester
+    winter semester \YEAR
+    \fi
+    }
+
+    \opening{Dear newly-enrolled student,}
+
+    \input{src/einleitung}
+    %\vfill
+    %\input{src/ps_zulassung}
+    \pagebreak
+    \Fett{Your schedule for the first days}
+    %\Fett{Euer Terminkalender für die ersten Tage}
+    \enlargethispage{1ex}
+    \input{src/termine}
+    %\pagebreak
+    \Fett{What you can expect in your studies}
+    %\Fett{Das erwartet Euch im Studium}
+    \input{stundenplaene/stpl_\Timetable}
+    \input{src/misc}
+    ~\\\\
+    %\pagebreak
+    %\newpage
+    \input{src/mailinglisten}
+    %\pagebreak
+    \input{src/tuebingen}
+    \vfill
+    \pagebreak
+    \includepdf[delta=5mm 5mm]{pdf/stadtplan.pdf}
+  \end{letter}
+\end{document}
