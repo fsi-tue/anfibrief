@@ -128,33 +128,17 @@ distclean: mrproper
 
 
 # Mit diesem Target soll es *bald* (:P) einfach sein, die Hefte zu releasen
+# TODO: Brauchen wir dieses Target überhaupt noch? Man könnte Releases mit Git
+# taggen, aber da wir evtl. noch kleinere Fehler unter dem Semester fixen macht
+# das eigentlich auch bloß begrenzt Sinn (erstellt dann nur noch entsprechende
+# Ordner, aber wer archiviert die PDFs schon - kann man ja auch einfach neu
+# generieren).
 .PHONY: release
-release: default rename
+release: default
 	mkdir -p $(RELEASEDIR)/$(YEAR)/$(SEMESTER)
 	cp $(PDFDIR)/brief_*.pdf $(RELEASEDIR)/$(YEAR)/$(SEMESTER)/
-	cp $(PDFDIR)/stundenplan_uebersicht.pdf $(RELEASEDIR)/$(YEAR)/$(SEMESTER)/
+	cp $(PDFDIR)/stpl_uebersicht.pdf $(RELEASEDIR)/$(YEAR)/$(SEMESTER)/stundenplan_uebersicht.pdf
 	cp $(PDFDIR)/stadtplan.pdf $(RELEASEDIR)/$(YEAR)/$(SEMESTER)/
-#	svn add ../tags/$(YEAR)/$(SEMESTER)/
-#	svn commit -m "released $(YEAR)$(SEMESTER)" ../tags/$(YEAR)/$(SEMESTER)/
-
-# Dieses Target gibt allen Briefen sinnvollere Namen (die man nicht hätte
-# gleich verwenden können? :D)
-.PHONY: rename
-rename:
-	mv $(PDFDIR)/stpl_uebersicht.pdf $(PDFDIR)/stundenplan_uebersicht.pdf
-	mv $(PDFDIR)/brief_bbsc.pdf $(PDFDIR)/brief_bioinfo-bsc.pdf
-	mv $(PDFDIR)/brief_ibsc.pdf $(PDFDIR)/brief_informatik-bsc.pdf
-	mv $(PDFDIR)/brief_imsc.pdf $(PDFDIR)/brief_informatik-msc.pdf
-	mv $(PDFDIR)/brief_bmsc.pdf $(PDFDIR)/brief_bioinfo-msc.pdf
-	mv $(PDFDIR)/brief_mmsc.pdf $(PDFDIR)/brief_medieninfo-msc.pdf
-	mv $(PDFDIR)/brief_kmsc.pdf $(PDFDIR)/brief_kogwiss-msc.pdf
-ifeq ($(SEMESTER),WS)
-	mv $(PDFDIR)/brief_mbsc.pdf $(PDFDIR)/brief_medieninfo-bsc.pdf
-	mv $(PDFDIR)/brief_medbsc.pdf $(PDFDIR)/brief_medizininfo-bsc.pdf
-	mv $(PDFDIR)/brief_medmsc.pdf $(PDFDIR)/brief_medizininfo-msc.pdf
-	mv $(PDFDIR)/brief_kbsc.pdf $(PDFDIR)/brief_kogwiss-bsc.pdf
-	mv $(PDFDIR)/brief_ila.pdf $(PDFDIR)/brief_informatik-lehramt.pdf
-endif
 
 .PHONY: info
 info:
@@ -192,7 +176,6 @@ help:
 	@echo '  sommersemester - Build only the letters required for the sommersemester'
 	@echo 'Auxiliary targets:'
 	@echo '  release        - Copy the letters to $(RELEASEDIR)/$(YEAR)/$(SEMESTER)'
-	@echo '  rename         - Use more meaningful names'
 	@echo '  info           - Show the current configuration of the makefile'
 	@echo 'Cleaning targets:'
 	@echo '  clean          - Remove the $(OUTDIR)-Directory'
