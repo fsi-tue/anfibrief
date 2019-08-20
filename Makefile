@@ -103,7 +103,7 @@ endif
 # Mit diesem Target lässt sich ein bestimmter Brief erstellen
 # TODO: Dropped "stpl_%_$(SEMESTER).tex" from the prerequisites since some
 # timetables are missing. stundenplaene/stpl_%_$(YEAR)-$(SEMESTER).tex
-$(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex $(MEDIADIR)/fsilogo.pdf $(addprefix $(SRCDIR)/,termine.tex misc.tex einleitung.tex config.tex mailinglisten.tex tuebingen.tex ps_zulassung.tex env.tex)
+$(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex plaene $(MEDIADIR)/fsilogo.pdf $(addprefix $(SRCDIR)/,termine.tex misc.tex einleitung.tex config.tex mailinglisten.tex tuebingen.tex ps_zulassung.tex env.tex)
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 	latexmk -output-directory=$(OUTDIR) -pdf -pdflatex="pdflatex" $<
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi
