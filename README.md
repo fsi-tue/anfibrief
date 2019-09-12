@@ -12,7 +12,7 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 
 ### Voraussetzungen
 - Ihr benötigt ein Linux-System oder einen Mac. Sorry.
-- Inkscape muss installiert sein.
+- Inkscape und PDFTK müssen installiert sein. Ubuntu/Debian: `sudo apt install inkscape pdftk`
 
 ## HowTo Briefe updaten
 
@@ -69,6 +69,35 @@ Die Briefe der einzelnen Studiengänge setzen sich zusammen aus:
 - Wichtig: Der Stadtplan wird automatisiert in eine PDF umgewandelt und an die
   Briefe gehängt. Den Stadtplan nur mit Inkscape bearbeiten, Illustrator o.ä.
   sorgen für seltsame Fehler im Makefile.
+
+## If-Else-Trickserei
+An vielen Stellen, vor allem bei den Terminen, können unterschiedliche Texte notwendig sein, da z.B. Anfangszeiten unterschiedlich sind oder der Text auf Englisch verfasst werden muss. Wir haben dazu für Winter- und Sommersemester sowie jeden Studiengang eine if-Konstruktion eingebaut, mit der sich die Dokumente entsprechend verzweigen lassen:
+
+|Boolean|Befehl|
+|-------|------|
+|Sommersemester?|`\ifsommersemester`|
+|Wintersemester?|`\ifwintersemester`|
+|Bachelor?|`\ifbachelor`|
+|Master?|`\ifmaster`|
+|Info?|`\ifinfo`|
+|Bioinfo?|`\ifbinfo`|
+|Medieninfo?|`\ifmedien`|
+|Kogni?|`\ifkogwiss`|
+|Lehramt?|`\iflehramt`|
+|Medizininfo?|`\ifmedinfo`|
+|Machine Learning?|`\ifml`|
+
+Benutzung wie folgt:
+```latex
+\ifsommersemester
+    \ifbachelor
+        \ifbinfo
+            Dieser Text erscheint nur im Bachelor Bioinformatik-Brief und wenn der Brief fürs Sommersemester kompiliert wird.
+         \fi
+    \fi
+\fi
+```
+Ganz wichtig: **Alle** ifs immer mit `\fi` schließen, sonst fliegt euch das Dokument um die Ohren.
 
 ## Private Subversion history
 
