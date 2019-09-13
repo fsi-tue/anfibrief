@@ -33,8 +33,7 @@ folgenden Dinge erledigt werden:
     - Dazu einfach auf den `master`-Branch von
       https://github.com/fsi-tue/anfibrief pushen, die PDFs werden dann
       automatisch generiert und veröffentlicht
-      ([Website](https://www.fsi.uni-tuebingen.de/erstsemester/material/start),
-      [Index](https://teri.fsi.uni-tuebingen.de/anfibrief/)).
+      ([Index](https://teri.fsi.uni-tuebingen.de/anfibrief/)).
     - Das Ergebnis bitte kurz prüfen.
 
 ## Wo ist was?
