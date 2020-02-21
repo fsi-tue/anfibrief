@@ -87,7 +87,7 @@ ifndef INKSCAPE
 	echo '\shipout\hbox{}\end' | pdftex && mv texput.pdf $(PDFDIR)/stadtplan.pdf
 else
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
-	inkscape -C -T $(MEDIADIR)/stadtplan.svg --export-pdf=$(OUTDIR)/stadtplan.pdf
+	inkscape -C -T $(MEDIADIR)/stadtplan.svg --export-file=$(OUTDIR)/stadtplan.pdf
 	mv $(OUTDIR)/stadtplan.pdf $(PDFDIR)/stadtplan.pdf
 endif
 
