@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
       inherit (texlive) scheme-minimal latexmk latexconfig latex koma-script
         graphics german xcolor bera collection-fontsrecommended fontawesome
         geometry oberdiek totpages ms setspace microtype hyphenat pdfpages tools
-        url hyperref;
+        url hyperref babel babel-german hyphen-german;
     })
   ];
 
