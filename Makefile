@@ -34,7 +34,7 @@ PDFTK := $(shell pdftk --version 2> /dev/null)
 PLAENE = stpl_uebersicht stadtplan
 
 # Zum SS koennen Info, Bioinfo sowie alle Master begonnen werden
-SOMMERSEMESTER = $(PLAENE) brief_informatik-bsc brief_bioinfo-bsc brief_informatik-msc brief_bioinfo-msc brief_medieninfo-msc brief_medizininfo-msc brief_kogwiss-msc brief_informatik-lehramt
+SOMMERSEMESTER = $(PLAENE) brief_informatik-bsc brief_bioinfo-bsc brief_informatik-msc brief_bioinfo-msc brief_medieninfo-msc brief_medizininfo-msc brief_kogwiss-msc brief_informatik-bed brief_informatik-med
 # Zum WS kann man das aus dem SS beginnen plus zulassungsbeschraenkte Studiengaenge
 WINTERSEMESTER = $(SOMMERSEMESTER) brief_medieninfo-bsc brief_medizininfo-bsc brief_kogwiss-bsc brief_ml-msc
 
