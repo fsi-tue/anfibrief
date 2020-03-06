@@ -1,0 +1,17 @@
+\input{src/brief_init}
+
+\newcommand\studiengang{Informatik\ }
+\newcommand\abschluss{Bachelor of Education}
+
+\ifwintersemester
+\newcommand{\Timetable}{informatik-lehramt}
+\fi
+\ifsommersemester
+\newcommand{\Timetable}{informatik-lehramt_SS}
+\fi
+
+\lehramttrue
+\infotrue
+\bachelortrue
+
+\input{src/brief_main}
