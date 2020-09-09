@@ -89,14 +89,16 @@ ifndef INKSCAPE
 	echo '\shipout\hbox{}\end' | pdftex && mv texput.pdf $(PDFDIR)/stadtplan.pdf
 else
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
-	inkscape -C -T $(MEDIADIR)/stadtplan.svg -A $(OUTDIR)/stadtplan.tmp
+	inkscape --export-area-page --export-text-to-path $(MEDIADIR)/stadtplan.svg \
+	  --export-filename=$(OUTDIR)/stadtplan_tmp.pdf --export-type=pdf \
+	  || inkscape -C -T $(MEDIADIR)/stadtplan.svg -A $(OUTDIR)/stadtplan_tmp.pdf # For older Inkscape versions
   ifndef PDFTK
 	$(warning pdftk is missing! Skipping $@)
 	# Generate an empty PDF document for the rest of the build process:
 	echo '\shipout\hbox{}\end' | pdftex && mv texput.pdf $(PDFDIR)/stadtplan.pdf
   else
 	if [ ! -d $(PDFDIR) ]; then mkdir $(PDFDIR); fi
-	pdftk $(OUTDIR)/stadtplan.tmp update_info $(MEDIADIR)/stadtplan.info output $(PDFDIR)/stadtplan.pdf
+	pdftk $(OUTDIR)/stadtplan_tmp.pdf update_info $(MEDIADIR)/stadtplan.info output $(PDFDIR)/stadtplan.pdf
   endif
 endif
 
