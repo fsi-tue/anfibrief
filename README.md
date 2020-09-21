@@ -13,6 +13,7 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 ### Voraussetzungen
 - Ihr benötigt ein Linux-System oder einen Mac. Sorry.
 - Inkscape und PDFTK müssen installiert sein. Ubuntu/Debian: `sudo apt install inkscape pdftk`
+- Auf Arch/Manjaro müssen zudem java-commons-lang und bcprov installiert sein: `sudo pacman -S inkscape pdftk java-commons-lang bcprov`
 
 ## HowTo Briefe updaten
 
