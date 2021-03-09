@@ -1,6 +1,7 @@
 { nixpkgs ? <nixpkgs>
-# Run "nix-build --argstr date YYYY-MM-DD" to reproduce a build:
+# To reproduce a build via .github/scripts/reproduce.py:
 , date ? null
+, srcUrl ? null
 }:
 
 with import nixpkgs {};
@@ -12,7 +13,9 @@ stdenv.mkDerivation rec {
     else lib.fileContents
       (runCommand "anfibrief-date" {} "date --utc +'%F' > $out");
 
-  src = lib.cleanSource ./.;
+  src = if srcUrl != null
+    then fetchTarball srcUrl
+    else lib.cleanSource ./.;
 
   nativeBuildInputs = [ inkscape pdftk
     (texlive.combine {
