@@ -36,8 +36,6 @@ stdenv.mkDerivation rec {
     sed -i "s,\\day=\\day,\\day=$(date --date=$version +'%d')," src/env.tex
     # Changes for the Nix build:
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
-    sed -i "s,pdf/stadtplan.pdf,$out/stadtplan.pdf," \
-      src/brief_main.tex src/brief_main_en.tex
   '';
 
   buildPhase = ''
@@ -45,12 +43,15 @@ stdenv.mkDerivation rec {
     mkdir tmp-home
     export HOME=tmp-home
 
-    # Install PDFs into $out
-    export PDFDIR=$out
+    # In case $src already contains files in out/ and pdf/:
+    make distclean
 
     # Build the PDFs
     make
   '';
 
-  installPhase = "true"; # No need for "make install"
+  installPhase = ''
+    mkdir $out
+    cp pdf/* $out
+  '';
 }
