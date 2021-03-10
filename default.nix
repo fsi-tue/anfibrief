@@ -31,9 +31,10 @@ stdenv.mkDerivation rec {
     # Set SOURCE_DATE_EPOCH to make the build reproducible:
     export SOURCE_DATE_EPOCH="$(date --date=$version +'%s')"
     # Override the LaTeX values for \today:
-    sed -i "s,\\year=\\year,\\year=$(date --date=$version +'%Y')," src/env.tex
-    sed -i "s,\\month=\\month,\\month=$(date --date=$version +'%m')," src/env.tex
-    sed -i "s,\\day=\\day,\\day=$(date --date=$version +'%d')," src/env.tex
+    substituteInPlace src/env.tex \
+      --replace '\year=\year' "\year=$(date --date=$version +'%Y')" \
+      --replace '\month=\month' "\month=$(date --date=$version +'%m')" \
+      --replace '\day=\day' "\day=$(date --date=$version +'%d')"
     # Changes for the Nix build:
     sed -i 's,/usr/bin/env bash,${bash}/bin/bash,' Makefile
   '';
