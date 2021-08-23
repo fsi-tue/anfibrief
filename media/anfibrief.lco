@@ -91,25 +91,48 @@ Seite \thepage/\pageref{TotPages}
 
 \pagestyle{headings}
 
-\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
-\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
-\setkomavar{location}{\large\setstretch{1.20}%
-  \textbf{\if@logo\color{navy}\fi%
-Universität Tübingen}\par\medskip
-  \setstretch{1.1}\footnotesize%
-  \textbf{\if@logo\color{navy}\fi%
-Fachbereich Informatik\\
-(Wilhelm-Schickard-Institut)\\
-~\\
-Fachschaft Informatik}\\
-  \\
-  \seticon{faPhone} \quad +49 7071 29-70413 \\
-  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
-  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
-  \\ 
-  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
-  \hspace*{1em}\quad 72076 Tübingen
-}
+\ifkogwiss
+	\setkomavar{fromaddress}{Fachschaft Kognitionswissenschaft\\Sand 14\\72076 Tübingen}
+	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
+	\setkomavar{location}{\large\setstretch{1.20}%
+	\textbf{\if@logo\color{navy}\fi%
+	Universität Tübingen}\par\medskip
+	\setstretch{1.1}\footnotesize%
+	\textbf{\if@logo\color{navy}\fi%
+	Fachbereich Informatik\\
+	(Wilhelm-Schickard-Institut)\\
+	~\\
+	Fachschaft Kognitionswissenschaft}\\
+	\\
+	\
+	seticon{faAt} \quad kogni-fachschaft@fsi.uni-tuebingen.de \\
+	\seticon{faAt} \quad kogni-beratung@fsi.uni-tuebingen.de \\
+	\seticon{faGlobe} \quad www.fs-kogni.uni-tuebingen.de\\
+	\\ 
+	\seticon{faMapMarker} \quad Sand 14, Raum C102 \\ 
+	\hspace*{1em}\quad 72076 Tübingen
+	}
+\else
+	\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
+	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
+	\setkomavar{location}{\large\setstretch{1.20}%
+	  \textbf{\if@logo\color{navy}\fi%
+	Universität Tübingen}\par\medskip
+	  \setstretch{1.1}\footnotesize%
+	  \textbf{\if@logo\color{navy}\fi%
+	Fachbereich Informatik\\
+	(Wilhelm-Schickard-Institut)\\
+	~\\
+	Fachschaft Informatik}\\
+	  \\
+	  \seticon{faPhone} \quad +49 7071 29-70413 \\
+	  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
+	  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
+	  \\ 
+	  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
+	  \hspace*{1em}\quad 72076 Tübingen
+	}
+\fi
 
 % \firstfoot{}
 
