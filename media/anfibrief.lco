@@ -63,7 +63,7 @@
 	\parbox{\textwidth}{%
 	\ifpdf%
 	\if@logo%
-	\includegraphics[width=85mm, keepaspectratio=true]{media/kognilogo.pdf}%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
 	\else%
 	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
 	\fi%
@@ -106,7 +106,7 @@
 	Fachschaft Kognitionswissenschaft}\\
 	\\
 	\
-	seticon{faAt} \quad kogni-fachschaft@fsi.uni-tuebingen.de \\
+	\seticon{faAt} \quad kogni-fachschaft@fsi.uni-tuebingen.de \\
 	\seticon{faAt} \quad kogni-beratung@fsi.uni-tuebingen.de \\
 	\seticon{faGlobe} \quad www.fs-kogni.uni-tuebingen.de\\
 	\\ 
