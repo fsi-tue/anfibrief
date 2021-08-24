@@ -55,43 +55,44 @@
 \setkomavar{phoneseparator}{}
 \setkomavar{firstfoot}{} % Fusszeile erste Seite
 
-\firsthead{%
-\parbox{\textwidth}{%
-\ifpdf%
-  \if@logo%
-    \includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
-  \else%
-    \includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
- \fi%
-\else%
-  \if@logo%
-    \includegraphics[width=78mm,
-                     keepaspectratio=true]{logo.eps}%
-  \else%
-    \includegraphics[width=78mm,
-                     keepaspectratio=true]{logo_sw.eps}%
-  \fi%
-\fi%
-}}
-
-\setkomavar{nexthead}{} 
-%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fsi.uni-tuebingen.de}
-% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
-\setkomavar{nextfoot}{
-\parbox[t]{0.5\textwidth}{
-\footnotesize \flushleft \upshape 
-Seite \thepage/\pageref{TotPages}
-}
-\parbox[t]{0.5\textwidth}{
-\footnotesize \flushright \upshape 
-\url{https://www.fsi.uni-tuebingen.de} \\
-\href{mailto:fsi@fsi.uni-tuebingen.de}{\nolinkurl{fsi@fsi.uni-tuebingen.de}}
-}
-}% end nextfoot
 
 \pagestyle{headings}
 
 \ifkogwiss
+	\firsthead{%
+	\parbox{\textwidth}{%
+	\ifpdf%
+	\if@logo%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/kognilogo.pdf}%
+	\else%
+	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
+	\fi%
+	\else%
+	\if@logo%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo.eps}%
+	\else%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo_sw.eps}%
+	\fi%
+	\fi%
+	}}
+	
+	\setkomavar{nexthead}{} 
+	%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fs-kogni.uni-tuebingen.de}
+	% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+	\setkomavar{nextfoot}{
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushleft \upshape 
+	Seite \thepage/\pageref{TotPages}
+	}
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushright \upshape 
+	\url{https://www.fs-kogni.uni-tuebingen.de} \\
+	\href{mailto:kogni-fachschaft@fsi.uni-tuebingen.de}{\nolinkurl{kogni-fachschaft@fsi.uni-tuebingen.de}}
+	}
+	}% end nextfoot
+	
 	\setkomavar{fromaddress}{Fachschaft Kognitionswissenschaft\\Sand 14\\72076 Tübingen}
 	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
 	\setkomavar{location}{\large\setstretch{1.20}%
@@ -113,6 +114,40 @@ Seite \thepage/\pageref{TotPages}
 	\hspace*{1em}\quad 72076 Tübingen
 	}
 \else
+	\firsthead{%
+	\parbox{\textwidth}{%
+	\ifpdf%
+	\if@logo%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
+	\else%
+	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
+	\fi%
+	\else%
+	\if@logo%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo.eps}%
+	\else%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo_sw.eps}%
+	\fi%
+	\fi%
+	}}
+	
+	\setkomavar{nexthead}{} 
+	%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fsi.uni-tuebingen.de}
+	% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+	\setkomavar{nextfoot}{
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushleft \upshape 
+	Seite \thepage/\pageref{TotPages}
+	}
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushright \upshape 
+	\url{https://www.fsi.uni-tuebingen.de} \\
+	\href{mailto:fsi@fsi.uni-tuebingen.de}{\nolinkurl{fsi@fsi.uni-tuebingen.de}}
+	}
+	}% end nextfoot
+	
 	\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
 	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
 	\setkomavar{location}{\large\setstretch{1.20}%
