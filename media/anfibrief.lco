@@ -55,61 +55,119 @@
 \setkomavar{phoneseparator}{}
 \setkomavar{firstfoot}{} % Fusszeile erste Seite
 
-\firsthead{%
-\parbox{\textwidth}{%
-\ifpdf%
-  \if@logo%
-    \includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
-  \else%
-    \includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
- \fi%
-\else%
-  \if@logo%
-    \includegraphics[width=78mm,
-                     keepaspectratio=true]{logo.eps}%
-  \else%
-    \includegraphics[width=78mm,
-                     keepaspectratio=true]{logo_sw.eps}%
-  \fi%
-\fi%
-}}
-
-\setkomavar{nexthead}{} 
-%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fsi.uni-tuebingen.de}
-% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
-\setkomavar{nextfoot}{
-\parbox[t]{0.5\textwidth}{
-\footnotesize \flushleft \upshape 
-Seite \thepage/\pageref{TotPages}
-}
-\parbox[t]{0.5\textwidth}{
-\footnotesize \flushright \upshape 
-\url{https://www.fsi.uni-tuebingen.de} \\
-\href{mailto:fsi@fsi.uni-tuebingen.de}{\nolinkurl{fsi@fsi.uni-tuebingen.de}}
-}
-}% end nextfoot
 
 \pagestyle{headings}
 
-\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
-\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
-\setkomavar{location}{\large\setstretch{1.20}%
-  \textbf{\if@logo\color{navy}\fi%
-Universität Tübingen}\par\medskip
-  \setstretch{1.1}\footnotesize%
-  \textbf{\if@logo\color{navy}\fi%
-Fachbereich Informatik\\
-(Wilhelm-Schickard-Institut)\\
-~\\
-Fachschaft Informatik}\\
-  \\
-  \seticon{faPhone} \quad +49 7071 29-70413 \\
-  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
-  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
-  \\ 
-  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
-  \hspace*{1em}\quad 72076 Tübingen
-}
+\ifkogwiss
+	\firsthead{%
+	\parbox{\textwidth}{%
+	\ifpdf%
+	\if@logo%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
+	\else%
+	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
+	\fi%
+	\else%
+	\if@logo%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo.eps}%
+	\else%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo_sw.eps}%
+	\fi%
+	\fi%
+	}}
+	
+	\setkomavar{nexthead}{} 
+	%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fs-kogni.uni-tuebingen.de}
+	% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+	\setkomavar{nextfoot}{
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushleft \upshape 
+	Seite \thepage/\pageref{TotPages}
+	}
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushright \upshape 
+	\url{https://www.fs-kogni.uni-tuebingen.de} \\
+	\href{mailto:kogni-fachschaft@fsi.uni-tuebingen.de}{\nolinkurl{kogni-fachschaft@fsi.uni-tuebingen.de}}
+	}
+	}% end nextfoot
+	
+	\setkomavar{fromaddress}{Fachschaft Kognitionswissenschaft\\Sand 14\\72076 Tübingen}
+	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
+	\setkomavar{location}{\large\setstretch{1.20}%
+	\textbf{\if@logo\color{navy}\fi%
+	Universität Tübingen}\par\medskip
+	\setstretch{1.1}\footnotesize%
+	\textbf{\if@logo\color{navy}\fi%
+	Fachbereich Informatik\\
+	(Wilhelm-Schickard-Institut)\\
+	~\\
+	Fachschaft Kognitionswissenschaft}\\
+	\\
+	\
+	\seticon{faAt} \quad kogni-fachschaft@fsi.uni-tuebingen.de \\
+	\seticon{faAt} \quad kogni-beratung@fsi.uni-tuebingen.de \\
+	\seticon{faGlobe} \quad www.fs-kogni.uni-tuebingen.de\\
+	\\ 
+	\seticon{faMapMarker} \quad Sand 14, Raum C102 \\ 
+	\hspace*{1em}\quad 72076 Tübingen
+	}
+\else
+	\firsthead{%
+	\parbox{\textwidth}{%
+	\ifpdf%
+	\if@logo%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
+	\else%
+	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
+	\fi%
+	\else%
+	\if@logo%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo.eps}%
+	\else%
+	\includegraphics[width=78mm,
+	keepaspectratio=true]{logo_sw.eps}%
+	\fi%
+	\fi%
+	}}
+	
+	\setkomavar{nexthead}{} 
+	%\setkomavar{nextfoot}{\parbox{\textwidth}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}\hfill www.fsi.uni-tuebingen.de}
+	% \nextfoot{\parbox{5cm}{\vspace{10mm} \footnotesize \upshape Seite \thepage/\pageref{TotPages}}}
+	\setkomavar{nextfoot}{
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushleft \upshape 
+	Seite \thepage/\pageref{TotPages}
+	}
+	\parbox[t]{0.5\textwidth}{
+	\footnotesize \flushright \upshape 
+	\url{https://www.fsi.uni-tuebingen.de} \\
+	\href{mailto:fsi@fsi.uni-tuebingen.de}{\nolinkurl{fsi@fsi.uni-tuebingen.de}}
+	}
+	}% end nextfoot
+	
+	\setkomavar{fromaddress}{Fachschaft Informatik\\Sand 14\\72076 Tübingen}
+	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
+	\setkomavar{location}{\large\setstretch{1.20}%
+	  \textbf{\if@logo\color{navy}\fi%
+	Universität Tübingen}\par\medskip
+	  \setstretch{1.1}\footnotesize%
+	  \textbf{\if@logo\color{navy}\fi%
+	Fachbereich Informatik\\
+	(Wilhelm-Schickard-Institut)\\
+	~\\
+	Fachschaft Informatik}\\
+	  \\
+	  \seticon{faPhone} \quad +49 7071 29-70413 \\
+	  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
+	  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
+	  \\ 
+	  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
+	  \hspace*{1em}\quad 72076 Tübingen
+	}
+\fi
 
 % \firstfoot{}
 

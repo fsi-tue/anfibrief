@@ -19,7 +19,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ inkscape pdftk
     (texlive.combine {
-      inherit (texlive) scheme-minimal latexmk latexconfig latex koma-script
+      inherit (texlive) scheme-minimal latexmk latexconfig latex latex-bin
+        koma-script
         graphics german xcolor bera collection-fontsrecommended fontawesome
         geometry oberdiek totpages ms setspace microtype hyphenat pdfpages tools
         url hyperref babel babel-german hyphen-german hycolor atveryend
