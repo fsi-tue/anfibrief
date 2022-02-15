@@ -20,12 +20,17 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 Jedes Semester müssen die Briefe aktualisiert werden. Dafür müssen die
 folgenden Dinge erledigt werden:
 
+0. Informationen sammeln:
+    - Mathe Vorkurs bei Rüdiger Zeller (Wann, Anmeldeschluss)
+    - Informatik Vorkurs für BioInfos bei Philipp Thiel (Wann, Anmeldeschluss)
+
 1. Termine updaten
     - Hierzu müsst ihr die Datei termine.tex öffnen und entsprechend editieren.
       Termine der Fachschaft Psychologie werden mit `\ifkogwiss .. \fi`
       umschlossen.
     - Es gibt desweiteren noch das Flag `\ifmaster ... \fi`, mit dem man Termine
       nur für alle Masterstudiengänge gültig machen kann.
+
 2. Daten in `src/config.tex` updaten
 3. Stundenpläne ggf. updaten
 4. Probeexemplare an die Mailingliste schicken
@@ -43,7 +48,7 @@ Die Briefe der einzelnen Studiengänge setzen sich zusammen aus:
   Seitenlayout sowie die Fußzeile.
 - `src/config.tex`, hier werden grundsätzliche Infos die in jedem Brief
   vorkommen gesetzt, z.B. Info- und Mathe-Profs sowie der Preis des
-  Semestertickets.
+  Semestertickets, Anmeldeschluss für Vorkurse
 - `src/brief_main.tex`, hier wird das Hauptdokument definert und die einzelnen
   Abschnitte werden eingebunden.
 - `src/brief_init.tex`, hier werden die `if`-Statements für die einzelnen Briefe
