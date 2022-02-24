@@ -32,7 +32,7 @@ folgenden Dinge erledigt werden:
       nur für alle Masterstudiengänge gültig machen kann.
 
 2. Daten in `src/config.tex` updaten
-3. Stundenpläne ggf. updaten
+3. Stundenpläne ggf. updaten, (siehe Modulhandbuch / Alma)
 4. Probeexemplare an die Mailingliste schicken
 5. Wenn kein Einspruch kommt, Briefe an Frau Hallmayer schicken
 6. Briefe releasen
