@@ -5,9 +5,9 @@ SHELL := /usr/bin/env bash
 # angepasst werden (am besten über Shell-Variablen, z. B. "export YEAR=2017"
 # und "unset YEAR" zum Zurücksetzen):
 YEAR ?= $(shell date '+%Y')
-# Das Semester ist um 2 Monate nach vorne verschoben, da wir die Briefe ja vor
+# Das Semester ist um 3 Monate nach vorne verschoben, da wir die Briefe ja vor
 # dem entsprechenden Semester aktualisieren wollen.
-SEMESTER ?= $(shell if [[ $$(date +%m) > 02 && $$(date +%m) < 07 ]]; then echo SS; else echo WS; fi)
+SEMESTER ?= $(shell if [[ $$(date +%m) > 01 && $$(date +%m) < 06 ]]; then echo SS; else echo WS; fi)
 ifeq ($(SEMESTER),WS)
   ApplySemester = \\wintersemestertrue
 else ifeq ($(SEMESTER),SS)
@@ -145,7 +145,7 @@ release: default
 .PHONY: info
 info:
 	@echo 'Year: $(YEAR)'
-	@echo 'Semester: $(SEMESTER) (brought forward by two months)'
+	@echo 'Semester: $(SEMESTER) (brought forward by three months)'
 	@echo 'Tools required for stadtplan.pdf (optional):'
 ifndef INKSCAPE
 	@echo '- Warning: Inkscape is missing!'

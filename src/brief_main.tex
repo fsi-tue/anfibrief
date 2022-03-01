@@ -9,6 +9,7 @@
 \usepackage{pdfpages}
 \usepackage{xcolor}
 \usepackage{eurosym}
+\usepackage{graphics}
 \usepackage{url} % especially useful for line breaks and online version
 \PassOptionsToPackage{hyphens}{url} % avoids package loading clash with url and hyperref
 \usepackage{hyperref}
@@ -50,20 +51,20 @@
     	\fcolorbox{green}{white}{
     		\begin{minipage}[t]{
     				\textwidth}
-    			Solltest du noch nicht geimpft sein, hast du noch die Möglichkeit einen Termin über die Uni zu bekommen. Das empfehlen wir sehr, damit im Herbst möglichst viele Veranstaltungen in Präsenz statt finden können.\\
-    			Weitere Hinweise findest du unter \url{https://uni-tuebingen.de/universitaet/infos-zum-coronavirus/impfen/}
+    			Solltest du noch nicht geimpft sein, hast du noch die Möglichkeit einen Termin über die Uni zu bekommen. Nutze die Chance um dich und Andere zu schützen.\\
+    			Weitere Infos findest du unter \url{https://uni-tuebingen.de/universitaet/infos-zum-coronavirus/impfen/} oder \url{https://dranbleiben-bw.de}.
     \end{minipage}}}\vspace{0.5cm}
     \Fett{Dein Terminkalender für die ersten Tage}
-    %\Fett{Euer Terminkalender für die ersten Tage}
+
     \enlargethispage{1ex}
     \input{src/termine}
-    %\pagebreak
+    \pagebreak
+    
     \Fett{Das erwartet dich im Studium}
-    %\Fett{Das erwartet Euch im Studium}
     \input{stundenplaene/stpl_\Timetable}
     \input{src/misc}
-    ~\\\\
-    %\pagebreak
+    ~
+    
 %    \ifbachelor
 %        \ifbinfo
 %            \newpage
@@ -73,7 +74,7 @@
 %        \fi
 %    \fi
     \input{src/mailinglisten}
-    %\pagebreak
+    \pagebreak
     \input{src/tuebingen}
     \vfill
     \pagebreak
