@@ -42,6 +42,9 @@ folgenden Dinge erledigt werden:
       ([Index](https://teri.fsi.uni-tuebingen.de/anfibrief/)).
     - Das Ergebnis bitte kurz prüfen.
 
+### HowTo WS 2022/2023
+- Die POs haben sich geändet, die meisten meisten Änderungen sind im Anfibrief von SoSe 2022 schon drinn.
+
 ## Wo ist was?
 Die Briefe der einzelnen Studiengänge setzen sich zusammen aus:
 - `media/anfibrief.lco`, diese Datei definiert den Briefkopf und das
