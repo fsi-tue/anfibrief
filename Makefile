@@ -5,6 +5,16 @@ SHELL := /usr/bin/env bash
 # angepasst werden (am besten über Shell-Variablen, z. B. "export YEAR=2017"
 # und "unset YEAR" zum Zurücksetzen):
 YEAR ?= $(shell date '+%Y')
+
+# add the git commit short id and date of the revision these PDFs are built from
+GIT_COMMIT_ID =  $(shell if [[ -f .BUILDINFO ]]; \
+                 then echo $(shell grep SOURCE_COMMIT .BUILDINFO | awk -F '"' '{print $$2}' | cut -c1-7); \
+                 else echo $(shell (git rev-parse --short HEAD)); fi)
+GIT_COMMIT_DATE = $(shell if [[ -f .BUILDINFO ]]; \
+                  then echo $(shell grep SOURCE_DATE .BUILDINFO | awk -F '"' '{print $$2}'); \
+                  else echo $(shell (git log -1 --format=%cd --date=format:'%Y-%m-%d')); fi)
+GIT_COMMIT := $(shell echo '\newcommand{\gitCommit}{$(GIT_COMMIT_ID) @ $(GIT_COMMIT_DATE)}' > src/envGitCommit.tex)
+
 # Das Semester ist um 3 Monate nach vorne verschoben, da wir die Briefe ja vor
 # dem entsprechenden Semester aktualisieren wollen.
 SEMESTER ?= $(shell if [[ $$(date +%m) > 01 && $$(date +%m) < 06 ]]; then echo SS; else echo WS; fi)
@@ -116,6 +126,7 @@ $(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex plaene $(MEDIADIR)/fsilogo.pdf $
 .PHONY: clean
 clean:
 	if [ -d $(OUTDIR) ]; then rm --recursive ./$(OUTDIR); fi
+	if [ -f src/envGitCommit.tex ]; then rm src/envGitCommit.tex; fi
 
 # Mit diesem Target können alle erzeugten Dateien wieder entfernt werden
 .PHONY: mrproper

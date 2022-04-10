@@ -24,7 +24,8 @@ stdenv.mkDerivation rec {
         graphics german xcolor bera collection-fontsrecommended fontawesome
         geometry oberdiek totpages ms setspace microtype hyphenat pdfpages tools
         url hyperref babel babel-german hyphen-german hycolor atveryend
-        epstopdf-pkg pdflscape l3kernel l3packages etoolbox;
+        epstopdf-pkg pdflscape l3kernel l3packages etoolbox
+        fancyhdr;
     })
   ];
 

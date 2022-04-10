@@ -28,3 +28,6 @@ auto/
 # OS specific files (Windows & macOS)
 Thumbs.db
 *.DS_Store
+
+# This file is only needed for the built process and generated
+src/envGitCommit.tex
