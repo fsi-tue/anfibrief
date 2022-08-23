@@ -1,8 +1,12 @@
 # To-Do:
 
-- Vorkurse (Informatik? und Mathe)
+[x] Vorkurse (Informatik? und Mathe)
 - Termine updaten
-- Stundenpläne 
+- Stundenpläne
+- Mathe Prof ist Ochs? Oder Britta?
+(Kogni-Spezifika)
+- spezielle Kogni-Veranstaltungen
+- Kogni-Mentor*innen? (einleitung.tex)
 
 # Studiengänge
 
@@ -18,6 +22,8 @@
 - Medieninformatik M.
 - Medizininformatik B.Sc.
 - Medizininformatik M:
+
+
 
 # Mathe Vorkurs
 
