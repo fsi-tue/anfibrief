@@ -3,10 +3,15 @@
 [x] Vorkurse (Informatik? und Mathe)
 - Termine updaten
 - Stundenpläne
-- Mathe Prof ist Ochs? Oder Britta?
+    [x] Info verifizieren
+    [x] Mathe verifizieren
+    [x] Organische Chemie
+    - TI1
+    - Medizininformatik
 (Kogni-Spezifika)
 - spezielle Kogni-Veranstaltungen
 - Kogni-Mentor*innen? (einleitung.tex)
+- Stdndenpläne
 
 # Studiengänge
 
