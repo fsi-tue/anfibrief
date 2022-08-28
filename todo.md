@@ -12,6 +12,8 @@
 - spezielle Kogni-Veranstaltungen
 - Kogni-Mentor*innen? (einleitung.tex)
 - Stdndenpläne
+- aktuelle Github Version
+- Pagebreaks
 
 # Studiengänge
 
