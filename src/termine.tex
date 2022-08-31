@@ -25,7 +25,7 @@
         \item[Mathevorkurs-Master -- Montag, 4. Oktober \YEAR, 08:00 Uhr]\ \\
         Heute beginnt der Vorbereitungskurs Mathematik speziell für Kognitionswissenschaftler im Master. Es ist zwar nicht Pflicht, daran teilzunehmen, aber sehr empfehlenswert. Nicht zuletzt lernt ihr hier erste Mitstudierende kennen! Der Vorkurs bietet euch eine Zusammenfassung des Mathestoffs, der im Bachelor Kognitionswissenschaft an der Uni Tübingen behandelt wird.
         \textbf{Wenn ihr euren Bachelor nicht an der Universität Tübingen oder in einem anderen Fach erworben habt, kann der Vorkurs für euch sinnvoll sein.} Falls ihr Quereinsteiger seid, werdet ihr dadurch an die in eurem Studium benötigten mathematischen Grundlagen herangeführt. Falls ihr bereits mathematisches Vorwissen mitbringt, ist der Kurs eine gute Gelegenheit, euer Wissen aufzufrischen.\\
-         Es wäre super, wenn ihr euch mit einer kurzen Mail an \texttt{kogni-beratung@fsi.uni-tuebingen.de} bei Simon Heuschkel anmelden würdet. Alle weiteren Infos erhaltet ihr dann per Mail.\\
+         Es wäre super, wenn ihr euch mit einer kurzen Mail an \texttt{kogni-beratung@fsi.uni-tuebingen.de} bei Simon Heuschkel anmelden würdet. Alle weiteren Infos erhaltet ihr dann per Mail.
 
 %Stattfinden wird der Vorkurs im ÜR 08 in der alten Physik, das ist die Gmelinstraße 6. Diese befindet sich an der Bushaltestelle Gmelinstraße, nördlich gegenüber von der Neuen Aula. Wenn ihr auf der Wilhelmstraße seid, geht rechts an der Neuen Aula vorbei, dort findet ihr die Alte Physik an der Ecke Gmelin- und Nauklerstraße, rechts von der Neuen Aula. Seid ihr auf der Hölderlinstraße, geht links dran vorbei und die Alte Physik ist auf der linken Straßenseite. Genaue Informationen bezüglich Treffpunkt am ersten Termin erhaltet ihr dann nochmal per Mail.
 %
@@ -35,17 +35,29 @@
     \fi
 \fi
 
-\ifml
-	\item~ % Funktioniert nicht anders, don't judge me
-\else
-	% Mathe-Vorkurs
-    \item[Mathevorkurs Bachelor -- \mathedatum~\YEAR]~\\
-    \ifbachelor
-    Heute beginnt der Vorbereitungskurs Mathematik. Es ist zwar nicht Pflicht, daran teilzunehmen, aber es ist sehr empfehlenswert.
-    \fi
-    \ifmaster
-    Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\\\\
-    \fi
+% Mathe-Vorkurs (nicht ML und nicht Kogni Master)
+\ifmaster
+	\ifml %
+	\else
+		\ifkogwiss %
+		\else
+			\item[Mathevorkurs -- \mathedatum~\YEAR]~\\
+			Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\\\\
+			Der Vorkurs bietet dir eine Wiederholung des Schulstoffes und eine Einführung in die Uni-Mathematik. Zudem hast du die Möglichkeit, einige deiner neuen Mitstudierenden kennenzulernen und erste Lerngruppen zu bilden.
+
+			\textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
+			Anmeldung/Infos unter:  \url{https://uni-tuebingen.de/de/91877}\\
+			Kontakt: \texttt{janosch.doecker\At uni-tuebingen.de}\\
+			\ifsommersemester
+			\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6) 
+			\fi
+		\fi
+	\fi
+\fi
+
+\ifbachelor
+	\item[Mathevorkurs -- \mathedatum~\YEAR]~\\
+	Heute beginnt der Vorbereitungskurs Mathematik. Es ist zwar nicht Pflicht, daran teilzunehmen, aber es ist sehr empfehlenswert.
 	Der Vorkurs bietet dir eine Wiederholung des Schulstoffes und eine Einführung in die Uni-Mathematik. Zudem hast du die Möglichkeit, einige deiner neuen Mitstudierenden kennenzulernen und erste Lerngruppen zu bilden.
 	
 	\textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
@@ -72,11 +84,18 @@
 
 % Kastenlauf
 \ifml
-	\item[Crate Run -- Friday, October 7th, \YEAR, 19:00, Sand]~\\
+	\item[Crate Run -- Friday, October 7th, \YEAR, Sand]~\\
+	Join us on our Crate Run! We will provide each team of 2-3 persons with a crate (alcoholic or non-alcoholic) (for a small donation).
+	Your goal is to drink up your crate until you reach the finish line. (Non-alcoholic teams will have to come up against small obstacles.)
+	If you are looking forward to meeting new people and a good mood, come on over! \\
 	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
 \else
-	\item[Kastenlauf -- Freitag, 7. Oktober \YEAR, 19 Uhr, Sand]~\\
-
+	\item[Kastenlauf -- Freitag, 7. Oktober \YEAR, Sand]~\\
+	Wir laden euch herzlich zu unserem Kastenlauf ein.
+	Jedes zwei bis dreier Team bekommt einen Kasten (alkoholisch oder alkoholfrei) gegen einen kleinen Groschen von uns gestellt. 
+	Das Ziel ist es, an der Ziellinie den Kasten leer getrunken zu haben. 
+	Jede Gruppe mit einem alkoholfreien Kasten trifft auf witzige Hürden. 
+	Unser Motto: Wer nicht wankt, der nicht gewinnt! Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, kann gerne vorbeischauen! \\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
 
@@ -98,20 +117,20 @@
 
 % Frühstück
 % TODO: Lisbeth fragen, wer Zeilgruppe ist
-\ifbachelor
-	\item[Frühstück -- Freitag, 14. Oktober \YEAR, 9 Uhr, Mensa Morgenstelle]\ \\
-	Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten erwartet -- auch im Gespräch mit älteren Studierenden.
-	Danach machen wir eine Führung über die Morgenstelle, damit du die wichtigsten Räume und Hörsäle kennen lernst.
-	Wenn du Lust hast, kannst du anschließend ab 11:45 Uhr das Mensaessen ausprobieren.\\
-	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
-\fi
+% \ifbachelor
+% 	\item[Frühstück -- Freitag, 14. Oktober \YEAR, 9 Uhr, Mensa Morgenstelle]\ \\
+% 	Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten erwartet -- auch im Gespräch mit älteren Studierenden.
+% 	Danach machen wir eine Führung über die Morgenstelle, damit du die wichtigsten Räume und Hörsäle kennen lernst.
+% 	Wenn du Lust hast, kannst du anschließend ab 11:45 Uhr das Mensaessen ausprobieren.\\
+% 	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
+% \fi
 
 %Wanderung
 \ifml
 	\item[Hike -- Saturday, October 15th \YEAR, 11:00, in front of Neckarmüller]~\\
 	On a leisurely hike you will get to know not only your fellow students,
 	but also a few lecturers and the worthwhile surroundings of Tübingen!
-	The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq.
+	The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq. \\
 	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1-22)
 \else
 	\item[Wanderung -- Samstag, 15. Oktober \YEAR, 11 Uhr, vor dem Neckarmüller]~\\
@@ -123,50 +142,47 @@
 
 % Erste Vorlesung
 \ifbachelor
-\item[Erste Vorlesung -- Montag, 17. Oktober \YEAR, 08:00, Morgenstelle]~\\
-Deine erste Vorlesung beginnt um
-\ifwintersemester 8 Uhr -- Du hast „Mathe I für Informatiker“  \fi
-\ifsommersemester 10 Uhr -- Du hast „Mathe II für Informatiker“  \fi
-bei \Matheprof.
-Alles, was du heute (und in Zukunft) benötigst: persönlichen Wachmacher, einen Stift, einen Block und den Studierendenausweis.
+	\item[Erste Vorlesung -- Montag, 17. Oktober \YEAR, 08:00, Morgenstelle]~\\
+	Deine erste Vorlesung beginnt um
+	\ifwintersemester 8 Uhr -- Du hast „Mathe I für Informatiker“  \fi
+	\ifsommersemester 10 Uhr -- Du hast „Mathe II für Informatiker“  \fi
+	bei \Matheprof.
+	Alles, was du heute (und in Zukunft) benötigst: persönlichen Wachmacher, einen Stift, einen Block und den Studierendenausweis.
 
-\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
+	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
 \fi
 
 \ifkogwiss
-\item[Vorstellung der Lehrstühle -- Montag, 17. Oktober \YEAR, 17:00 Uhr und online]\ \\
-    Hier stellen sich die kognitionswissenschaftlichen Lehrstühle (also die verschiedenen Forschungsbereiche der Professoren) vor. Dies ist super um einen Überblick zu bekommen, was die Kognitionswissenschaft alles beinhaltet und um erste Eindrücke von den Profs zu bekommen. Auch die Fachschaft stellt sich dir hier erstmals vor. %Danach gibt es noch Gelegenheit, mit der Fachschaft ein Glas Milch trinken zu gehen.
-    Auch für Kogni-Master ist das eine super Veranstaltung. \\
-	Das Datum kann sich nochmal ändern, genauere Informationen folgen dann noch.
-    %Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de/}.
-    
+	\item[Vorstellung der Lehrstühle -- Montag, 17. Oktober \YEAR, 17:00 Uhr und online]\ \\
+		Hier stellen sich die kognitionswissenschaftlichen Lehrstühle (also die verschiedenen Forschungsbereiche der Professoren) vor. Dies ist super um einen Überblick zu bekommen, was die Kognitionswissenschaft alles beinhaltet und um erste Eindrücke von den Profs zu bekommen. Auch die Fachschaft stellt sich dir hier erstmals vor. %Danach gibt es noch Gelegenheit, mit der Fachschaft ein Glas Milch trinken zu gehen.
+		Auch für Kogni-Master ist das eine super Veranstaltung. \\
+		Das Datum kann sich nochmal ändern, genauere Informationen folgen dann noch.
+		%Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de/}.
 \fi
 
 %Stadtrallye
 \ifml
-	\item[City Rally -- Tuesday, October 18h \YEAR, 16:00 Uhr, \footnotesize{location \& start time will be given to you after registration}]~\\
+	\item[City Rally -- Tuesday, October 18h \YEAR, ca. 16:00]~\\
 	On this evening, you can participate in a team-based scavenger hunt across the city,
 	where you will get to know interesting, beautiful as well as disturbing spots within Tübingen.
 	As a side effect, you will hopefully get to know your new home town a bit better and make new friends.
 \else
-	\item[Stadtrallye -- Dienstag, 18. Oktober \YEAR, 16 Uhr, \footnotesize{Ort \& Zeit wird dir nach Anmeldung mitgeteilt}]~\\
+	\item[Stadtrallye -- Dienstag, 18. Oktober \YEAR, ca. 16 Uhr]~\\
 	Bei der Stadtrallye lassen wir dich und deine Kommilitonen und Kommilitoninnen gegeneinander in Teams antreten.
 	Dabei werdet ihr interessante, schöne und verstörende Ecken Tübingens kennenlernen.
 \fi
 
 
-
-
 % Kneipentour
 \ifml
-\item[Pub Crawl -- Wednesday, October 19th \YEAR, 18:00, \footnotesize{location \& start time will be given to you after registration}]~\\
+\item[Pub Crawl -- Wednesday, October 19th \YEAR, ca. 18:00]~\\
 Tübingen is laced with small bars and pubs that have a significant impact on the night life in Tübingen.
 In order to calm down from the stress of this information-filled day, we'd like to invite you to go bar-hopping with us.
 We'll divide up into small groups and visit the different bars in the historic town center.
 Please bring enough cash, most places we will visit don't accept cards (\emph{none whatsoever}).
 
 \else
-\item[Kneipentour -- Mittwoch, 19. Oktober \YEAR, 18 Uhr, \footnotesize{Ort \& Zeit wird dir nach Anmeldung mitgeteilt}]~\\
+\item[Kneipentour -- Mittwoch, 19. Oktober \YEAR, ca. 18 Uhr]~\\
 Tübingen ist übersät mit kleinen Kneipen und Bars, die das Nachtleben maßgeblich bestimmen.
 Um den Stress der ersten Veranstaltungen etwas sacken zu lassen, laden wir dich zu einer ausgiebigen Kneipentour ein,
 bei der wir in Kleingruppen die verschiedenen Lokalitäten der Tübinger Altstadt besuchen.
@@ -187,11 +203,11 @@ Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars m
 	You're not in the mood for cooking this evening? Fear not!
     The student council invites you for a BBQ. Bring whatever you want to put on the grill,
     please also bring your own plates and cutlery. The garden has enough space for stuff like volleyball, football etc. as well.\\
-	\seticon{faBus}~\textbf{bus stop:} route 2, route 6, Sand Drosselweg
+	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
 \else
 	\item[Grillen -- Samstag, 22. Oktober \YEAR, 17 Uhr, im Garten des Sandes]~\\
 	Du hast keinen Bock auf Kochen? Dann bist du hier genau richtig! In geselliger Runde wird die Fachschaft mit dir grillen.
-	Bring dazu mit, was auch immer du zum Grillen brauchst, Gas- und Kohlegrill warten auf dich. Vergiss bitte auch nicht, dein Besteck und Geschirr einzupacken!\\
+	Bring dazu mit, was auch immer du zum Grillen brauchst, Gas- und Kohlegrill warten auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
 	Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
@@ -232,15 +248,14 @@ Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars m
 %Clubhausfest
 \ifml
     \item[Clubhausfest -- Thursday, November 3rd \YEAR, 21:00, Clubhaus]\ \\
-        Every thursday during the lecture period, a different student body or group of students organizes the "`Clubhaus Fest"' in the Clubhaus, which locates directly opposite of the new auditorium. Today the attendance is particularly worthwhile, because the student councils of computer science, cognitive science and psychology are hosting the event! 
+        Every thursday during the lecture period, a different student body or group of students organizes the "`Clubhaus Fest"' in the Clubhaus, which locates directly opposite of the new auditorium. Today the attendance is particularly worthwhile, because the student councils of computer science, cognitive science and psychology are hosting the event! \\
 
         \seticon{faBus}~\textbf{bus stop:} Uni/Neue Aula or Hölderlinstraße
 \else
-    \item[Clubhausfest -- Donnerstag, 3. November \YEAR, 21:00 Uhr, Clubhaus]\ \\
-        Während der Vorlesungszeit richtet jeden Donnerstag eine andere Fachschaft oder studentische Gruppierung das Clubhausfest im Clubhaus, direkt gegenüber der Neuen Aula, aus. Heute lohnt sich der Besuch jedoch ganz besonders, denn die Fachschaften Informatik, Kogni und Psychologie sind Gastgeber!
+    \item[Clubhausfest -- Donnerstag, 3. November \YEAR, 21 Uhr, Clubhaus]\ \\
+        Während der Vorlesungszeit richtet jeden Donnerstag eine andere Fachschaft oder studentische Gruppierung das Clubhausfest im Clubhaus, direkt gegenüber der Neuen Aula, aus. Heute lohnt sich der Besuch jedoch ganz besonders, denn die Fachschaften Informatik, Kogni und Psychologie sind Gastgeber! \\
 %Das anfängliche Chaos des Vorlesungsbeginns hat sich gelegt und auch an diesem Donnerstag findet das Clubhausfest statt.
-
-%\seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula bzw. Hölderlinstraße
+		\seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula oder Hölderlinstraße
 \fi
 
 %\ifkogwiss
@@ -248,9 +263,9 @@ Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars m
 %    Damit sich die Kognis untereinander kennenlernen, gibt es einen Abend nur für diese. Der genaue Ablauf des Abends wird im Laufe der ersten Vorkurswoche bekannt gegeben.
 %\fi
 
-%Ersti-Mentorenprogramm
-\ifbachelor
-	\item[TBA] Dieses Semester bietet unser Fachbereich speziell ein Mentoren-Programm für Erstis an. Dabei soll es ein regelmäßiges Treffen zwischen einem Professor und Kleingruppen an Studenten geben, in denen Fragen und Probleme geklärt werden. Weitere Details folgen.
-\fi
+% %Ersti-Mentorenprogramm
+% \ifbachelor
+% 	\item[TBA] Dieses Semester bietet unser Fachbereich speziell ein Mentoren-Programm für Erstis an. Dabei soll es ein regelmäßiges Treffen zwischen einem Professor und Kleingruppen an Studenten geben, in denen Fragen und Probleme geklärt werden. Weitere Details folgen.
+% \fi
 
 \end{description}
