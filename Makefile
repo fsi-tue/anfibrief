@@ -46,7 +46,7 @@ PLAENE = stpl_uebersicht stadtplan
 # Zum SS koennen Info, Bioinfo sowie alle Master begonnen werden
 SOMMERSEMESTER = $(PLAENE) brief_informatik-bsc brief_bioinfo-bsc brief_informatik-msc brief_bioinfo-msc brief_medieninfo-msc brief_informatik-bed brief_informatik-med brief_medizininfo-msc
 # Zum WS kann man das aus dem SS beginnen plus zulassungsbeschraenkte Studiengaenge
-WINTERSEMESTER = $(SOMMERSEMESTER) brief_medieninfo-bsc brief_medizininfo-bsc brief_kogwiss-bsc brief_ml-msc brief_medizininfo-msc brief_kogwiss-msc
+WINTERSEMESTER = $(SOMMERSEMESTER) brief_medieninfo-bsc brief_medizininfo-bsc brief_kogwiss-bsc brief_ml-msc brief_kogwiss-msc
 
 # Nur im Wintersemester müssen alle Briefe erstellt werden
 ifeq ($(SEMESTER),WS)
