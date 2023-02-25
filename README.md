@@ -14,6 +14,23 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 - Ihr benötigt ein Linux-System oder einen Mac. Sorry.
 - Inkscape und PDFTK müssen installiert sein. Ubuntu/Debian: `sudo apt install inkscape pdftk`
 - Auf Arch/Manjaro müssen zudem java-commons-lang und bcprov installiert sein: `sudo pacman -S inkscape pdftk java-commons-lang bcprov`
+- Zum benutzen der Makefile müssen auf allen Distributionen die Pakete `make` und `latexmk` installiert sein
+
+### TexLive-Pakete (Stand: Februar 2023)
+#### Archlinux und Derivate
+- texlive-bin (automatisch als Abhängigkeit der Unteren)
+- texlive-core (automatisch als Abhängigkeit der Unteren)
+- texlive-fontsextra
+- texlive-latexextra
+
+#### Ubuntu, Debian und Derivate
+- tex-common (automatisch als Abhängigkeit der Unteren)
+- texlive-base (automatisch als Abhängigkeit der Unteren)
+- texlive-binaries (automatisch als Abhängigkeit der Unteren)
+- texlive-latex-base  (automatisch als Abhängigkeit der Unteren)
+- texlive-latex-recommended
+- texlive-lang-german
+- texlive-fonts-extra
 
 ## HowTo Briefe updaten
 
