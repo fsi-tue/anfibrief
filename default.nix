@@ -30,6 +30,7 @@ stdenv.mkDerivation rec {
   ];
 
   postPatch = ''
+    cp src/env.tex.sample src/env.tex
     # Set SOURCE_DATE_EPOCH to make the build reproducible:
     export SOURCE_DATE_EPOCH="$(date --date=$version +'%s')"
     # Override the LaTeX values for \today:
