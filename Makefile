@@ -68,6 +68,7 @@ env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}
 -include env-update
 .PHONY: env-update
 env-update:
+	cp $(SRCDIR)/env.tex.sample $(SRCDIR)/env.tex
 	@$(call env-replace,YEAR)
 	@$(call env-replace,ApplySemester)
 	@$(call env-replace,LETTERDIR)
@@ -77,10 +78,10 @@ env-update:
 plaene: $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(PLAENE)))
 
 # Mit diesem Target lassen sich die Briefe für das Sommersemester erstellen
-sommersemester: $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(SOMMERSEMESTER)))
+sommersemester: env-update $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(SOMMERSEMESTER)))
 
 # Mit diesem Target lassen sich die Briefe für das Wintersemester erstellen
-wintersemester: $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(WINTERSEMESTER)))
+wintersemester: env-update $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(WINTERSEMESTER)))
 
 # Mit diesem Target lässt sich eine Übersicht über die Stundenpläne erstellen
 #stundenplan: $(PDFDIR)/stpl_uebersicht.pdf # Alias
@@ -127,6 +128,7 @@ $(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex plaene $(MEDIADIR)/fsilogo.pdf $
 clean:
 	if [ -d $(OUTDIR) ]; then rm --recursive ./$(OUTDIR); fi
 	if [ -f src/envGitCommit.tex ]; then rm src/envGitCommit.tex; fi
+	if [ -f src/env.tex ]; then rm src/env.tex; fi
 
 # Mit diesem Target können alle erzeugten Dateien wieder entfernt werden
 .PHONY: mrproper

@@ -29,5 +29,6 @@ auto/
 Thumbs.db
 *.DS_Store
 
-# This file is only needed for the built process and generated
+# These files are only needed for the built process and generated
 src/envGitCommit.tex
+src/env.tex
