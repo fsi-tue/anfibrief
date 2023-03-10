@@ -85,7 +85,7 @@
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifbinfo \ifmaster \pagebreak \fi \fi
+% \ifbinfo \ifmaster \pagebreak \fi \fi
 
 % Frühstück
 % TODO: Lisbeth fragen, wer Zeilgruppe ist
@@ -189,7 +189,7 @@ Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, 
 \else
 	\item[Filmeabend -- Montag, 17. April \YEAR, 19:30, Sand]~\\
 	Am Abend des ersten Vorlesungstages veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
-	Schaut mit uns einen Film an und entspannt euch nach eurem ersten Tag im Studileben.\\
+	Schaut mit uns einen Film an und entspannt euch nach eurem ersten Tag im Studileben.
 	Bringt eure neuen Freund:innen und eure Lieblingssnacks mit und los geht's!\\
 	Für Getränke ist gegen eine kleine Spende gesorgt.\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
@@ -239,7 +239,6 @@ Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, 
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
 
-% TODO: Erstihütte
 \ifml
 	% TODO?
 \else
@@ -283,7 +282,8 @@ Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, 
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifbinfo \ifmaster \pagebreak \fi \fi
+\ifbachelor \pagebreak \fi
+\ifmaster \ifbinfo \else \pagebreak \fi \fi
 
 %Wanderung 2
 \ifml
@@ -317,7 +317,7 @@ Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, 
 	Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
 	sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
 	Komm doch einfach mal zu unserer Schnuppersitzung
-	\footnote{Natürlich freuen wir uns auch sehr wenn du schon vor der Schnuppersitzung zu regulären Sitzungen kommst}
+	\footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
 	und schau ob es dir gefällt!\\
 	Keine Anmeldung nötig.\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)

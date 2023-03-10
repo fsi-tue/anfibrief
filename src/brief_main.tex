@@ -75,11 +75,11 @@
     \fett{Stundenplan}
     \input{stundenplaene/stpl_\Timetable}
     %TODO Nächstes Semester: Anpassen
-    \ifbachelor \pagebreak \fi
+    \ifbachelor \iflehramt \\ \else \newpage \fi \fi
     \input{src/misc}
     %TODO Nächstes Semester: Anpassen
     \ifkogwiss \ifbachelor \pagebreak \fi \fi
-    \ifinfo \ifbachelor \pagebreak \fi \fi
+    \ifbachelor \pagebreak \fi
     \input{src/mailinglisten}
     \pagebreak
     \input{src/tuebingen}
