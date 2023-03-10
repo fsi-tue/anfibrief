@@ -83,23 +83,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ab hier die FSI Events einfügen. Darüber sind der Mathe und Info vorkurs.
 
-% Kastenlauf
-\ifml
-	\item[Crate Run -- Friday, October 7th, \YEAR, Sand]~\\
-	Join us on our Crate Run! We will provide each team of 2-3 persons with a crate (alcoholic or non-alcoholic) (for a small donation).
-	Your goal is to drink up your crate until you reach the finish line. (Non-alcoholic teams will have to come up against small obstacles.)
-	If you are looking forward to meeting new people and a good mood, come on over! \\
-	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-\else
-	\item[Kastenlauf -- Freitag, 7. Oktober \YEAR, Sand]~\\ %todo: Datum, Uhrzeit?
-	Wir laden euch herzlich zu unserem Kastenlauf ein.
-	Jedes zwei bis dreier Team bekommt einen Kasten (alkoholisch oder alkoholfrei) gegen einen kleinen Groschen von uns gestellt. 
-	Das Ziel ist es, an der Ziellinie den Kasten leer getrunken zu haben.
-	Jede Gruppe mit einem alkoholfreien Kasten trifft auf witzige Hürden.
-	Unser Motto: Wer nicht wankt, der nicht gewinnt! Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, kann gerne vorbeischauen! \\
-	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-\fi
-
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
 \ifbinfo \ifmaster \pagebreak \fi \fi
@@ -153,6 +136,27 @@
 % TODO: Muss jedes jahr angepasst werden.
 % \ifbachelor \pagebreak \fi
 
+% Kastenlauf
+\ifml
+\item[Crate Run -- Friday, April 14th \YEAR, 18:00, Rewe West]~\\
+Please join us on our crate run.
+Each team of two to three will have a crate (can be purchased on site).
+The goal is to have emptied the crate at the finish line.
+On your tour you will have to visit a few stops.
+We don't force anyone to drink, you are also welcome to drink non-alcoholic beer, soft drinks, or whatever you like.
+So if you're up for meeting new people, good vibes, and a little sporty drinking, feel free to drop by! \\
+\seticon{faBus}~\textbf{bus stop:} Schleifmühleweg (bus lines 11 \& 12)
+\else
+\item[Kastenlauf -- Freitag, 14. April \YEAR, 18:00, Rewe Weststadt]~\\
+Wir laden euch herzlich zu unserem Kastenlauf ein.
+Jedes Zweier- bis Dreierteam hat einen Kasten (kann vor Ort gekauft werden).
+Das Ziel ist es, an der Ziellinie den Kasten leergetrunken zu haben.
+Auf eurer Tour müsst ihr dabei verschiedene Stationen besuchen.
+Unser Motto: Wer nicht wankt, der nicht gewinnt!\footnote{Wir zwingen niemanden zum Saufen, ihr dürft auch gerne alkoholfreies Bier, Softdrinks, etc. trinken.}
+Wer also Lust hat auf neue Leute, gute Laune und ein wenig sportliches Trinken, kann gerne vorbeischauen! \\
+\seticon{faBus}~\textbf{Bushaltestelle:} Schleifmühleweg (Linie 11 \& 12)
+\fi
+
 %Wanderung 1
 \ifml
 	\item[Hike -- Saturday, April 15th \YEAR, 11:00, on the Neckarinsel (Neckar Island)]~\\
@@ -170,7 +174,7 @@
 
 % Erste Vorlesung
 \ifbachelor
-	\item[Erste Vorlesung -- Montag, 17. April \YEAR, 10:00, Morgenstelle]~\\ %TODO: Uhrzeit anpassen
+	\item[Erste Vorlesung -- Montag, 17. April \YEAR, \ifwintersemester 8:00, \else 10:00, \fi Morgenstelle]~\\
 	Deine erste Vorlesung beginnt um
 	\ifwintersemester 8 Uhr -- Du hast „Mathematik für Informatik 1“  \fi
 	\ifsommersemester 10 Uhr -- Du hast „Mathematik für Informatik 2“  \fi
@@ -179,7 +183,17 @@
 	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
 \fi
 
-% todo: Filmeabend
+\ifml
+	% Falls im Wintersemester ein Filmeabend veranstaltet wird, sollte in der Einladung erwähnt werden, auf welcher
+	% Sprache der Film gezeigt wird.
+\else
+	\item[Filmeabend -- Montag, 17. April \YEAR, 19:30, Sand]~\\
+	Am Abend des ersten Vorlesungstages veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
+	Schaut mit uns einen Film an und entspannt euch nach eurem ersten Tag im Studileben.\\
+	Bringt eure neuen Freund:innen und eure Lieblingssnacks mit und los geht's!\\
+	Für Getränke ist gegen eine kleine Spende gesorgt.\\
+	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\fi
 
 %Spieleabend 1
 \ifml
@@ -223,6 +237,15 @@
 	Bring dazu mit, was auch immer du zum Grillen brauchst, Gas- und Kohlegrill warten auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
 	Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\fi
+
+% TODO: Erstihütte
+\ifml
+	% TODO?
+\else
+	\item[Erstihütte -- Freitag, 28. April bis Sonntag, 30. April \YEAR]~\\
+	Vom 28. bis 30. April fahren wir auf die Erstihütte in Kalkweil.
+	Euch erwartet ein geselliges Programm und ein entspanntes Miteinander.
 \fi
 
 %Spieleabend 2
