@@ -37,7 +37,7 @@
   \setkomavar{subject}{\studiengang in T"ubingen }
 
   \begin{letter}
-    {An alle Studienanfänger\\
+    {An alle Studienanfänger:innen\\
     des Studiengangs\\
     \studiengang (\abschluss)\\
     \ifsommersemester
@@ -70,16 +70,16 @@
     \enlargethispage{1ex}
     \input{src/termine}
     \pagebreak
-    
+
     \Fett{Das erwartet dich im Studium} \\
     \fett{Stundenplan}
     \input{stundenplaene/stpl_\Timetable}
     %TODO Nächstes Semester: Anpassen
-    \iflehramt \ifbachelor \pagebreak \fi \fi
+    \ifbachelor \iflehramt \\ \else \newpage \fi \fi
     \input{src/misc}
     %TODO Nächstes Semester: Anpassen
     \ifkogwiss \ifbachelor \pagebreak \fi \fi
-    \ifinfo \ifbachelor \pagebreak \fi \fi
+    \ifbachelor \pagebreak \fi
     \input{src/mailinglisten}
     \pagebreak
     \input{src/tuebingen}
