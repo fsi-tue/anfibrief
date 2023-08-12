@@ -57,21 +57,24 @@
     \fi
 \fi
 
-% Mathe-Vorkurs (nicht ML und nicht Kogni Master)
+% Mathe-Vorkurs (nicht ML und nicht Kogni Master und nicht Lehramt Master)
 \ifmaster
 	\ifml %
 	\else
 		\ifkogwiss %
 		\else
-			\item[Mathevorkurs -- \mathedatum~\YEAR]~\\
-			Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\\\\
-			Der Vorkurs bietet dir eine Wiederholung des Schulstoffes und eine Einführung in die Uni-Mathematik. Zudem hast du die Möglichkeit, einige deiner neuen Mitstudierenden kennenzulernen und erste Lerngruppen zu bilden.
+			\iflehramt %
+			\else
+				\item[Mathevorkurs -- \mathedatum~\YEAR]~\\
+				Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\\\\
+				Der Vorkurs bietet dir eine Wiederholung des Schulstoffes und eine Einführung in die Uni-Mathematik. Zudem hast du die Möglichkeit, einige deiner neuen Mitstudierenden kennenzulernen und erste Lerngruppen zu bilden.
 
-			\textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
-			Anmeldung/Infos unter: \url{https://uni-tuebingen.de/de/91877}\\
-			Kontakt: \texttt{\mathkontakt}\\
-			\ifsommersemester
-			\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6) 
+				\textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
+				Anmeldung/Infos unter: \url{https://uni-tuebingen.de/de/91877}\\
+				Kontakt: \texttt{\mathkontakt}\\
+				\ifsommersemester
+				\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6) 
+				\fi
 			\fi
 		\fi
 	\fi
@@ -122,7 +125,7 @@
 \else
 	\item[Grillen 1 -- Freitag, 6. Oktober \YEAR, im Garten des Sandes]~\\%, 17:00 Uhr, im Garten des Sandes]~\\
 	Du hast keinen Bock auf Kochen? Dann bist du hier genau richtig! In geselliger Runde wird die Fachschaft mit dir grillen.
-	Bring dazu mit, was auch immer du zum Grillen brauchst, Gas- und Kohlegrill warten auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
+	Bring dazu mit, was auch immer du zum Grillen brauchst, ein großer Gasgrill wartet auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
 	Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
@@ -159,12 +162,19 @@
 \ifml
 	\item[Semester Opening by Faculty -- Friday, October 13th \YEAR, 16:00, N6 Morgenstelle]\ \\
 	Department information session with presentation of all elective courses in the winter semester.
+	This event is especially useful if you are new to Tübingen in order to get a first impression,
+	which professors and courses you will be dealing with in the future.
 \else
 	\item[Semestereröffnung Fachbereich -- Freitag, 13. Oktober \YEAR, 16:00, N6 Morgenstelle]\ \\
 	Informationsveranstaltung des Fachbereichs mit Vorstellung aller
 	Wahlveranstaltungen im Wintersemester. 
+	\ifbachelor
 	Die Veranstaltung richtet sich vor allem an höhere Semester, 
 	wer als hochmotivierter Bachelor Ersti Informationen sammeln will, darf natürlich dennoch vorbeischauen.
+	\else
+	Diese Veranstaltung ist besonders sinnvoll, wenn du neu nach Tübingen kommst um dir ein erstes Bild davon zu machen,
+	mit welchen Professoren und Veranstaltungen du es zukünftig zu tun hast.
+	\fi
 \fi
 
 %Wanderung 1 %TODO time & location
@@ -175,7 +185,7 @@
 	The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq. \\
 	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1-22)
 \else
-	\item[Wanderung 1 -- Samstag, 14. October \YEAR]~\\%, 11:00 Uhr, auf der Neckarinsel]~\\
+	\item[Wanderung 1 -- Samstag, 14. Oktober \YEAR]~\\%, 11:00 Uhr, auf der Neckarinsel]~\\
 	Bei einer gemütlichen Wanderung lernt ihr neben euren Kommilitonen und Kommilitoninnen auch
 	noch ein paar Dozierende und die sehenswerte Tübinger Umgebung kennen!
 	Der Treffpunkt ist bei der Neckarbrücke (\emph{vor} dem Gasthaus \glqq Neckarmüller\grqq).\\
@@ -256,9 +266,9 @@
 	% Sprache der Film gezeigt wird.
 \else
 	\item[Filmeabend -- Dienstag, 24. Oktober \YEAR, Sand]~\\%, 19:30 Uhr, Sand]~\\
-	Am Abend des ersten Vorlesungstages veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
-	Schaut mit uns einen Film an und entspannt euch nach eurem ersten Tag im Studileben.
-	Bringt eure neuen Freund:innen und eure Lieblingssnacks mit und los geht's!\\
+	Am Abend veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
+	Schaut mit uns einen Film an und entspannt euch nach eurer ersten Woche im Studileben.
+	Bringt eure neuen Freunde, Freundinnen und eure Lieblingssnacks mit und los geht's!\\
 	Für Getränke ist gegen eine kleine Spende gesorgt.\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
@@ -273,7 +283,7 @@
 \else
 	\item[Grillen 2 -- Mittwoch, 25. Oktober \YEAR, im Garten des Sandes]~\\%, 17:00 Uhr, im Garten des Sandes]~\\
 	Du hast keinen Bock auf Kochen? Dann bist du hier genau richtig! In geselliger Runde wird die Fachschaft mit dir grillen.
-	Bring dazu mit, was auch immer du zum Grillen brauchst, Gas- und Kohlegrill warten auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
+	Bring dazu mit, was auch immer du zum Grillen brauchst, ein großer Gasgrill wartet auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
 	Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
@@ -286,7 +296,7 @@
 	The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq. \\
 	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1-22)
 \else
-	\item[Wanderung 2 -- Samstag, 28. October \YEAR]~\\%, 11:00 Uhr, auf der Neckarinsel]~\\
+	\item[Wanderung 2 -- Samstag, 28. Oktober \YEAR]~\\%, 11:00 Uhr, auf der Neckarinsel]~\\
 	Bei einer gemütlichen Wanderung lernt ihr neben euren Kommilitonen und Kommilitoninnen auch
 	noch ein paar Dozierende und die sehenswerte Tübinger Umgebung kennen!
 	Der Treffpunkt ist bei der Neckarbrücke (\emph{vor} dem Gasthaus \glqq Neckarmüller\grqq).\\
@@ -311,6 +321,10 @@
 	\seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula oder Hölderlinstraße
 \fi
 
+% Nur damit die Seite richtig gebrochen wird.
+% TODO: Muss jedes jahr angepasst werden.
+\ifmaster \iflehramt \pagebreak  \fi \fi
+
 %Wanderung 3 %TODO time & location
 \ifml
 	\item[Hike 3 -- Saturday, November 18th \YEAR]~\\%, 11:00, on the Neckarinsel (Neckar Island)]~\\
@@ -327,18 +341,8 @@
 \fi
 
 %Schnuppersitzung % TODO time
-\ifml
-	\item[fsi trial meeting -- TBA]~\\%Thursday, May 18th \YEAR, 18:30, Sand]~\\
-	Hopefully, we were able to arouse your interest in student council work with our events.
-	But we do much more than just first-year events, we represent the students in committees,
-	we are contact persons, provide infrastructure and tools and much more.
-	Just come to our tryout meeting
-	\footnote{Of course we are also very happy if you already come to regular meetings before the trial session}
-	and see if you like it!\\
-	No registration necessary.\\
-	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-\else
-	\item[Schnuppersitzung der fsi -- TBA]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
+\ifkogwiss
+	\item[Schnuppersitzung der fsk -- TBA (reguläre Sitzungen: Donnerstags, 18:30, vor dem Kogni Zimmer), Sand]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
 	Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
 	Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
 	sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
@@ -347,6 +351,28 @@
 	und schau ob es dir gefällt!\\
 	Keine Anmeldung nötig.\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\else
+	\ifml
+		\item[fsi trial meeting -- TBA (regular meetings: Thursdays, 18:30, Sand, A104)]~\\%Thursday, May 18th \YEAR, 18:30, Sand]~\\
+		Hopefully, we were able to arouse your interest in student council work with our events.
+		But we do much more than just first-year events, we represent the students in committees,
+		we are contact persons, provide infrastructure and tools and much more.
+		Just come to our tryout meeting
+		\footnote{Of course we are also very happy if you already come to regular meetings before the trial session}
+		and see if you like it!\\
+		No registration necessary.\\
+		\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
+	\else
+		\item[Schnuppersitzung der fsi -- TBA (reguläre Sitzungen: Donnerstags, 18:30, A104, Sand]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
+		Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
+		Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
+		sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
+		Komm doch einfach mal zu unserer Schnuppersitzung
+		\footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
+		und schau ob es dir gefällt!\\
+		Keine Anmeldung nötig.\\
+		\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+	\fi
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
