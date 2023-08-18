@@ -1,10 +1,10 @@
 # Don't you dare!
 # One does not simply "git add" build artifacts...
 /out
-# /pdf
+/pdf
 /final
 /result
-# *.pdf
+*.pdf
 
 # TODO: Is this still required?
 auto/
