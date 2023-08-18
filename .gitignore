@@ -5,6 +5,7 @@
 /final
 /result
 *.pdf
+!media/*.pdf
 
 # TODO: Is this still required?
 auto/
