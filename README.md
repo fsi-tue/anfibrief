@@ -16,12 +16,19 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 - Auf Arch/Manjaro müssen zudem java-commons-lang und bcprov installiert sein: `sudo pacman -S inkscape pdftk java-commons-lang bcprov`
 - Zum benutzen der Makefile müssen auf allen Distributionen die Pakete `make` und `latexmk` installiert sein
 
-### TexLive-Pakete (Stand: Februar 2023)
-#### Archlinux und Derivate
-- texlive-bin (automatisch als Abhängigkeit der Unteren)
-- texlive-core (automatisch als Abhängigkeit der Unteren)
+### TexLive-Pakete
+#### Archlinux und Derivate (Stand: August 2024)
+<!-- - texlive-bin (automatisch als Abhängigkeit der Unteren) -->
+<!-- - texlive-core (automatisch als Abhängigkeit der Unteren) -->
 - texlive-fontsextra
 - texlive-latexextra
+- texlive-binextra
+- texlive-langgerman
+- texlive-eurosym (bzw. texlive-fontsrecommended)
+```sh
+sudo pacman -S texlive-fontsextra texlive-latexextra texlive-binextra texlive-langgerman texlive-eurosym
+```
+
 
 #### Ubuntu, Debian und Derivate
 - tex-common (automatisch als Abhängigkeit der Unteren)
