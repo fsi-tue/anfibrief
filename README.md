@@ -45,7 +45,7 @@ Jedes Semester müssen die Briefe aktualisiert werden. Dafür müssen die
 folgenden Dinge erledigt werden:
 
 0. Informationen sammeln:
-    - Mathe Vorkurs bei Rüdiger Zeller (Wann, Anmeldeschluss)
+    - Mathe Vorkurs (Wann, Anmeldeschluss). Falls noch nirgends zu finden ist wer den macht, dann Britta Dorn fragen.
     - Informatik Vorkurs für BioInfos bei Philipp Thiel (Wann, Anmeldeschluss)
 
 1. Termine updaten
@@ -57,9 +57,10 @@ folgenden Dinge erledigt werden:
 
 2. Daten in `src/config.tex` updaten
 3. Stundenpläne ggf. updaten, (siehe Modulhandbuch / Alma)
-4. Probeexemplare an die Mailingliste schicken
-5. Wenn kein Einspruch kommt, Briefe an Frau Hallmayer schicken
-6. Briefe releasen
+4. Alle Stellen überprüfen, die mit `TODO` markiert sind (`grep -R TODO`) und ggf. updaten
+5. Probeexemplare an die Mailingliste schicken
+6. Wenn kein Einspruch kommt, Briefe an Frau Hallmayer schicken
+7. Briefe releasen
     - Dazu einfach auf den `master`-Branch von
       https://github.com/fsi-tue/anfibrief pushen, die PDFs werden dann
       automatisch generiert und veröffentlicht
