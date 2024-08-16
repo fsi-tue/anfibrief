@@ -59,7 +59,7 @@ folgenden Dinge erledigt werden:
 3. Stundenpläne ggf. updaten, (siehe Modulhandbuch / Alma)
 4. Alle Stellen überprüfen, die mit `TODO` markiert sind (`grep -R TODO`) und ggf. updaten
 5. Probeexemplare an die Mailingliste schicken
-6. Wenn kein Einspruch kommt, Briefe an Frau Hallmayer schicken
+6. Wenn kein Einspruch kommt, Briefe an Verena Seibold schicken
 7. Briefe releasen
     - Dazu einfach auf den `master`-Branch von
       https://github.com/fsi-tue/anfibrief pushen, die PDFs werden dann
