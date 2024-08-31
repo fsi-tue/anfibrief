@@ -46,7 +46,7 @@
     \ifbinfo
         \item[Informatikvorkurs -- \bioinfoDatum~\YEAR]\ \\
 		Heute beginnt ein Informatik-Vorkurs speziell für Bioinformatik-Studierende (Variante B) im Master. 
-		Dieser Vorkurs wird dringend empfohlen, wenn du aus einem fachfremden Studiengang wie z.B. Biologie oder anderen Lebenswissenschaften kommst und nur wenig Erfahrung in der Informatik und der Programmierung (CLI, Java, Python, \LaTeX) hast. Der Vorkurs wird in Englisch gehalten. \\
+		Dieser Vorkurs wird dringend empfohlen, wenn du aus einem fachfremden Studiengang wie z.B. Biologie oder anderen Lebenswissenschaften kommst und nur wenig Erfahrung in der Informatik und der Programmierung (CLI, Java, Python, \LaTeX) hast. Der Vorkurs wird auf Englisch gehalten. \\
 		\textbf{Anmeldeschluss:} \bioinfoAnmeldung\YEAR\\
 		Anmeldung/Infos unter: \url{https://uni-tuebingen.de/de/215092}\\
 		Kontakt: \texttt{\bioinfoKontakt}\\
@@ -63,7 +63,7 @@
 			\iflehramt %
 			\else
 				\item[Mathevorkurs -- \mathedatum~\YEAR]~\\
-				Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\\\\
+				Wenn du deinen Bachelor nicht in Tübingen oder in einem mathefremden Fach erworben hast, kann dieser Vorkurs für dich sehr sinnvoll sein. Auf unserer Website findest du ein Skript mit den Inhalten des Vorkurses. Damit solltest du einschätzen können, wie viel vom Stoff bereits bekannt ist und ob sich der Besuch des Vorkurses lohnt.\smallskip \\
 				Der Vorkurs bietet dir eine Wiederholung des Schulstoffes und eine Einführung in die Uni-Mathematik. Zudem hast du die Möglichkeit, einige deiner neuen Mitstudierenden kennenzulernen und erste Lerngruppen zu bilden.
 
 				\textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
@@ -177,32 +177,34 @@
 \ifbachelor \pagebreak  \fi
 
  % Frühstück
- \ifbachelor
-  	\item[Frühstück -- Freitag, 11. Oktober \YEAR, 9:00 Uhr, Mensa Morgenstelle]\ \\
-  	Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten erwartet -- auch im Gespräch mit älteren Studierenden.
-  	Danach machen wir eine Führung über die Morgenstelle, damit du die wichtigsten Räume und Hörsäle kennen lernst.
-  	Wenn du Lust hast, kannst du anschließend ab 11:45 Uhr das Mensaessen ausprobieren.\\
-  	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
- \fi
+\ifbachelor
+ 	\item[Frühstück -- Freitag, 11. Oktober \YEAR, 9:00 Uhr, Mensa Morgenstelle]\ \\
+ 	Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten erwartet -- auch im Gespräch mit älteren Studierenden.
+ 	Danach machen wir eine Führung über die Morgenstelle, damit du die wichtigsten Räume und Hörsäle kennen lernst.
+ 	Wenn du Lust hast, kannst du anschließend ab 11:45 Uhr das Mensaessen ausprobieren.\\
+ 	\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
+\fi
 
- % Semestereröffnung
- \ifml
- 	\item[Semester Opening by Faculty -- Thursday, October 10th \YEAR, 16:15, Audimax, Neue Aula]\ \\
- 	Department information session with presentation of all elective courses in the winter semester.
- 	This event is especially useful if you are new to Tübingen in order to get a first impression,
- 	which professors and courses you will be dealing with in the future.
- \else
- 	\item[Semestereröffnung Fachbereich -- Donnerstag, 10. Oktober \YEAR, 16:15, Audimax, Neue Aula]\ \\
- 	Informationsveranstaltung des Fachbereichs mit Vorstellung aller
- 	Wahlveranstaltungen im Wintersemester. 
- 	\ifbachelor
- 	Die Veranstaltung richtet sich vor allem an höhere Semester, 
- 	wer als hochmotivierter Bachelor Ersti Informationen sammeln will, darf natürlich dennoch vorbeischauen.
- 	\else
- 	Diese Veranstaltung ist besonders sinnvoll, wenn du neu nach Tübingen kommst um dir ein erstes Bild davon zu machen,
- 	mit welchen Professoren und Veranstaltungen du es zukünftig zu tun hast.
- 	\fi
- \fi
+% Semestereröffnung
+\ifml
+	\vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
+	\item[\parbox{\linewidth}{Semester Opening by Faculty -- Thursday, October 10th \YEAR, 16:15, Audimax, Neue Aula}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
+	Department information session with presentation of all elective courses in the winter semester.
+	This event is especially useful if you are new to Tübingen in order to get a first impression,
+	which professors and courses you will be dealing with in the future.
+\else
+	\vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
+	\item[\parbox{\linewidth}{Semestereröffnung Fachbereich -- Donnerstag, 10. Oktober \YEAR, 16:15, Audimax, Neue Aula}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
+	Informationsveranstaltung des Fachbereichs mit Vorstellung aller
+	Wahlveranstaltungen im Wintersemester.
+	\ifbachelor
+	Die Veranstaltung richtet sich vor allem an höhere Semester,
+	wer als hochmotivierter Bachelor-Ersti Informationen sammeln will, darf natürlich dennoch vorbeischauen.
+	\else
+	Diese Veranstaltung ist besonders sinnvoll, wenn du neu nach Tübingen kommst um dir ein erstes Bild davon zu machen,
+	mit welchen Professoren und Veranstaltungen du es zukünftig zu tun hast.
+	\fi
+\fi
 
 % %Wanderung 1 %TODO time & location
 % \ifml
@@ -430,7 +432,7 @@
 		No registration necessary.\\
 		\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
 	\else
-		\item[Schnuppersitzung der fsi -- TBA (reguläre Sitzungen: Donnerstags, 18:30, A104, Sand]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
+		\item[Schnuppersitzung der fsi -- TBA (reguläre Sitzungen: Donnerstags, 18:30, A104, Sand)]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
 		Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
 		Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
 		sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
@@ -455,7 +457,7 @@
 %	Hier stellen sich die kognitionswissenschaftlichen Lehrstühle (also die verschiedenen Forschungsbereiche der Professoren) vor. Dies ist super um einen Überblick zu bekommen, was die Kognitionswissenschaft alles beinhaltet und um erste Eindrücke von den Profs zu bekommen. Auch die Fachschaft stellt sich dir hier erstmals vor. %Danach gibt es noch Gelegenheit, mit der Fachschaft ein Glas Milch trinken zu gehen.
 %	Auch für Kogni-Master ist das eine super Veranstaltung. \\
 %	Das Datum kann sich nochmal ändern, genauere Informationen folgen dann noch.
-%	%Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de/}.
+%	%Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de}.
 %\fi
 
 
@@ -493,7 +495,7 @@
 %	% sorgen aber wir stellen gegen eine kleine Spende Getränke bereit und bestellen Pizza. Es werden auch einige höhersemestrige Kognis und Fachschaftler:innen da sein,
 %	% die man zum Kogni-Studium ausfragen kann. Kogni-Master sind natürlich auch herzlich eingeladen.
 %	\seticon{faBus}~\textbf{Bushaltestelle:} Linie 2, Sand Drosselweg (Rest ausgeschildert)
-%	Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de/}.
+%	Falls sich auf Grund der aktuellen Situation Details ändern sollten, findest du weitere Infos auf der Website \url{https://www.fs-kogni.uni-tuebingen.de}.
 %\fi
 
 % Nur damit die Seite richtig gebrochen wird.
@@ -519,7 +521,7 @@
 % Bus-Schnitzeljagd, neu im WS19/20
 %\item[Bus-Schnitzeljagd -- Samstag, 31. Oktober \YEAR, mit Anmeldesystem]\ \\
 %   Bei der Schnitzeljagd wirst du mit deinen Kommilitonen in Teams losgeschickt, um das Tübinger Busnetz zu erkunden. Durch das Lösen verschiedener Rätsel lernt ihr dabei nicht nur eure neuen Kommilitonen sondern auch einige Haltestellen besser kennen, die euch in eurem Uni-Alltag mehr oder weniger häufig begegnen werden. Da Studenten in Tübingen (und im kompletten naldo-Bereich) montags bis freitags ab 19:00 Uhr sowie ganztägig an Samstagen, Sonntagen und gesetzlichen Feiertagen in Baden-Württemberg kostenlos Bus und Bahn fahren dürfen, benötigt ihr für eure Erkundungstour lediglich euren Studierendenausweis.\\
-%    Für die Durchführung planen wir ein Anmeldesystem, um die Gruppen gestaffelt losschicken zu können. Dieses findest du über einen Link auf unserer Fachschafts-Website \url{https://www.fs-kogni.uni-tuebingen.de/}.
+%    Für die Durchführung planen wir ein Anmeldesystem, um die Gruppen gestaffelt losschicken zu können. Dieses findest du über einen Link auf unserer Fachschafts-Website \url{https://www.fs-kogni.uni-tuebingen.de}.
 %    Falls sich Details ändern sollten, findest du weitere Infos wie Uhrzeit und Treffpunkt ebenfalls auf unserer Webseite oder auf der Website der Fachschaft Informatik \url{https://www.fsi.uni-tuebingen.de/ersti}.\\
 %\fi
 
