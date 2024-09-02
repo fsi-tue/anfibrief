@@ -68,9 +68,9 @@
 
                 \textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
                 Anmeldung/Infos unter: \url{https://uni-tuebingen.de/de/91877}\\
-                Kontakt: \texttt{\mathkontakt}\\
+                Kontakt: \texttt{\mathkontakt}
                 \ifsommersemester
-                    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+                    \\ \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
                 \fi
             \fi
         \fi
@@ -84,9 +84,9 @@
 
     \textbf{Anmeldeschluss:} \matheanmeldung\YEAR\\
     Anmeldung/Infos unter: \url{https://uni-tuebingen.de/de/91877}\\
-    Kontakt: \texttt{\mathkontakt}\\
+    Kontakt: \texttt{\mathkontakt}
     \ifsommersemester
-    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+        \\ \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
     \fi
 \fi
 
@@ -146,7 +146,10 @@ Der Treffpunkt ist auf der Neckarinsel.\\
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifbachelor \pagebreak  \fi
+\ifmaster \ifinfo \iflehramt \else \pagebreak \fi \fi \fi
+\ifmaster \ifmedien \pagebreak \fi \fi
+\ifmaster \ifmedinfo \pagebreak \fi \fi
+\ifmaster \ifkogwiss \pagebreak \fi \fi
 
 % Kneipentour 1 % TODO Uhrzeit
 \ifml
@@ -162,6 +165,10 @@ Der Treffpunkt ist auf der Neckarinsel.\\
     bei der wir in Kleingruppen die verschiedenen Lokalitäten der Tübinger Altstadt besuchen.
     Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars mit EC-Karte zahlen! -- Volksbanken und Sparkassen finden sich bei Bedarf in der Stadt.
 \fi
+
+% Nur damit die Seite richtig gebrochen wird.
+% TODO: Muss jedes jahr angepasst werden.
+\ifbachelor \pagebreak \fi
 
 % Semestereröffnung
 \ifml
@@ -278,7 +285,11 @@ Der Treffpunkt ist auf der Neckarinsel.\\
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifbachelor \pagebreak  \fi
+\ifbachelor \pagebreak \fi
+\ifmaster \ifinfo \iflehramt \else \pagebreak \fi \fi \fi
+\ifmaster \ifmedien \pagebreak \fi \fi
+\ifmaster \ifmedinfo \pagebreak \fi \fi
+\ifmaster \ifkogwiss \pagebreak \fi \fi
 
 % Kastenlauf
 \ifml
@@ -376,7 +387,7 @@ Der Treffpunkt ist auf der Neckarinsel.\\
     \item[Clubhausfest -- Donnerstag, 31. Oktober \YEAR, 21:00 Uhr, Clubhaus]\ \\
     Während der Vorlesungszeit richtet jeden Donnerstag eine andere Fachschaft oder studentische Gruppierung das Clubhausfest
     im Clubhaus, direkt gegenüber der Neuen Aula, aus. Heute lohnt sich der Besuch jedoch ganz besonders, denn die Fachschaften
-    Informatik, Kogni, Psychologie, Neurobiologie und Geographie sind Gastgeber! \\
+    Informatik, Kogni, Psychologie, Neurobiologie und Geographie sind Gastgeber! % \\ % TODO line break wieder einfügen: Eigentlich wäre hier ein line break schöner, aber im WS24 würde dann eine einzelne Zeile auf die nächste Seite kommen
     Keine Anmeldung nötig.\\
     %Das anfängliche Chaos des Vorlesungsbeginns hat sich gelegt und auch an diesem Donnerstag findet das Clubhausfest statt.\\
     \seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula oder Hölderlinstraße
@@ -384,7 +395,7 @@ Der Treffpunkt ist auf der Neckarinsel.\\
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifml \pagebreak \fi
+% \ifml \pagebreak \fi
 
 \ifml
    % TODO?
@@ -412,8 +423,7 @@ Der Treffpunkt ist auf der Neckarinsel.\\
         Hopefully, we were able to arouse your interest in student council work with our events.
         But we do much more than just first-year events, we represent the students in committees,
         we are contact persons, provide infrastructure and tools and much more.
-        Just come to our tryout meeting
-        \footnote{Of course we are also very happy if you already come to regular meetings before the trial session}
+        Just come to our tryout meeting\footnote{Of course we are also very happy if you already come to regular meetings before the trial session}
         and see if you like it!\\
         No registration necessary.\\
         \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
@@ -422,8 +432,7 @@ Der Treffpunkt ist auf der Neckarinsel.\\
         Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
         Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
         sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
-        Komm doch einfach mal zu unserer Schnuppersitzung
-        \footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
+        Komm doch einfach mal zu unserer Schnuppersitzung\footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
         und schau ob es dir gefällt!\\
         Keine Anmeldung nötig.\\
         \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
