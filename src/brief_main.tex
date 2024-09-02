@@ -74,12 +74,17 @@
     \Fett{Das erwartet dich im Studium} \\
     \fett{Stundenplan}
     \input{stundenplaene/stpl_\Timetable}
-    %TODO Nächstes Semester: Anpassen falls nötig
-    %\ifbachelor \iflehramt \\ \else \newpage \fi \fi
+    % TODO Nächstes Semester: Anpassen falls nötig
+    % \ifbachelor \iflehramt \\ \else \newpage \fi \fi
     \input{src/misc}
-    %TODO Nächstes Semester: Anpassen Anpassen falls nötig
-    %\ifkogwiss \ifbachelor \pagebreak \fi \fi
-    \ifbachelor \pagebreak \fi
+    % TODO Nächstes Semester: Anpassen Anpassen falls nötig
+    % \ifkogwiss \ifbachelor \pagebreak \fi \fi
+    % \ifbachelor \pagebreak \fi
+    \ifmaster \iflehramt \pagebreak \fi \fi
+    \ifmaster \ifinfo \pagebreak \fi \fi
+    \ifmaster \ifmedinfo \pagebreak \fi \fi
+    \ifmaster \ifmedien \pagebreak \fi \fi
+    \ifkogwiss \pagebreak \fi
     \input{src/mailinglisten}
     \pagebreak
     \input{src/tuebingen}
