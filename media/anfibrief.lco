@@ -19,13 +19,9 @@
 \RequirePackage{graphicx}
 \geometry{a4paper, top=32mm, left=20mm, right=18mm, bottom=30mm, headsep=10mm, footskip=12mm}
 \@setplength{firstheadvpos}{10mm}
-\@setplength{locvpos}{11.1mm}
+\@setplength{locvpos}{15mm}
 \@setplength{lochpos}{10mm}
-\ifkogwiss % Die E-Mail-Adresse der Kognis ist länger, deshalb wird mehr Platz gebraucht
-	\@setplength{locwidth}{68mm}
-\else
-	\@setplength{locwidth}{52.5mm}
-\fi
+\@setplength{locwidth}{50mm}
 \@setplength{locheight}{90mm}
 \@setplength{refvpos}{108mm}
 

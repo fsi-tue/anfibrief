@@ -16,19 +16,12 @@ Briefe für das kommende Semester generieren und im Ordner `pdf` ablegen.
 - Auf Arch/Manjaro müssen zudem java-commons-lang und bcprov installiert sein: `sudo pacman -S inkscape pdftk java-commons-lang bcprov`
 - Zum benutzen der Makefile müssen auf allen Distributionen die Pakete `make` und `latexmk` installiert sein
 
-### TexLive-Pakete
-#### Archlinux und Derivate (Stand: August 2024)
-<!-- - texlive-bin (automatisch als Abhängigkeit der Unteren) -->
-<!-- - texlive-core (automatisch als Abhängigkeit der Unteren) -->
+### TexLive-Pakete (Stand: Februar 2023)
+#### Archlinux und Derivate
+- texlive-bin (automatisch als Abhängigkeit der Unteren)
+- texlive-core (automatisch als Abhängigkeit der Unteren)
 - texlive-fontsextra
 - texlive-latexextra
-- texlive-binextra
-- texlive-langgerman
-- texlive-eurosym (bzw. texlive-fontsrecommended)
-```sh
-sudo pacman -S texlive-fontsextra texlive-latexextra texlive-binextra texlive-langgerman texlive-eurosym
-```
-
 
 #### Ubuntu, Debian und Derivate
 - tex-common (automatisch als Abhängigkeit der Unteren)
@@ -45,7 +38,7 @@ Jedes Semester müssen die Briefe aktualisiert werden. Dafür müssen die
 folgenden Dinge erledigt werden:
 
 0. Informationen sammeln:
-    - Mathe Vorkurs (Wann, Anmeldeschluss). Falls noch nirgends zu finden ist wer den macht, dann Britta Dorn fragen.
+    - Mathe Vorkurs bei Rüdiger Zeller (Wann, Anmeldeschluss)
     - Informatik Vorkurs für BioInfos bei Philipp Thiel (Wann, Anmeldeschluss)
 
 1. Termine updaten
@@ -57,10 +50,9 @@ folgenden Dinge erledigt werden:
 
 2. Daten in `src/config.tex` updaten
 3. Stundenpläne ggf. updaten, (siehe Modulhandbuch / Alma)
-4. Alle Stellen überprüfen, die mit `TODO` markiert sind (`grep -R TODO`) und ggf. updaten
-5. Probeexemplare an die Mailingliste schicken
-6. Wenn kein Einspruch kommt, Briefe an Verena Seibold schicken
-7. Briefe releasen
+4. Probeexemplare an die Mailingliste schicken
+5. Wenn kein Einspruch kommt, Briefe an Frau Hallmayer schicken
+6. Briefe releasen
     - Dazu einfach auf den `master`-Branch von
       https://github.com/fsi-tue/anfibrief pushen, die PDFs werden dann
       automatisch generiert und veröffentlicht
