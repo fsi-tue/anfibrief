@@ -19,7 +19,7 @@
 \fancypagestyle{firststyle}
 {
    \fancyhf{}
-   \fancyfoot[C]{\tiny Sourcecode verfügbar unter \, \url{https://github.com/fsi-tue/anfibrief}\\ Aktuellste Version verfügbar unter \, \url{https://teri.fsi.uni-tuebingen.de/anfibrief/}\\ Revision: \gitCommit}
+   \fancyfoot[C]{\tiny Sourcecode verfügbar unter \, \url{https://github.com/fsi-tue/anfibrief}\\ Aktuellste Version verfügbar unter \, \url{https://teri.fsi.uni-tuebingen.de/anfibrief}\\ Revision: \gitCommit}
    \renewcommand{\headrulewidth}{0pt} % removes horizontal header line
 }
 
@@ -62,7 +62,7 @@
 %     		\begin{minipage}[t]{
 %     				\textwidth}
 %     			Solltest du noch nicht geimpft sein, hast du noch die Möglichkeit einen Termin über die Uni zu bekommen. Nutze die Chance um dich und Andere zu schützen.\\
-%     			Weitere Infos findest du unter \url{https://uni-tuebingen.de/universitaet/infos-zum-coronavirus/impfen/} oder \url{https://dranbleiben-bw.de}.
+%     			Weitere Infos findest du unter \url{https://uni-tuebingen.de/universitaet/infos-zum-coronavirus/impfen} oder \url{https://dranbleiben-bw.de}.
 %     \end{minipage}}}\vspace{0.5cm}
 
     \Fett{Dein Terminkalender für die ersten Tage}
@@ -74,12 +74,16 @@
     \Fett{Das erwartet dich im Studium} \\
     \fett{Stundenplan}
     \input{stundenplaene/stpl_\Timetable}
-    %TODO Nächstes Semester: Anpassen falls nötig
-    %\ifbachelor \iflehramt \\ \else \newpage \fi \fi
+    % TODO Nächstes Semester: Anpassen falls nötig
+    % \ifbachelor \iflehramt \\ \else \newpage \fi \fi
     \input{src/misc}
-    %TODO Nächstes Semester: Anpassen Anpassen falls nötig
-    %\ifkogwiss \ifbachelor \pagebreak \fi \fi
-    \ifbachelor \pagebreak \fi
+    % TODO Nächstes Semester: Anpassen Anpassen falls nötig
+    % \ifkogwiss \ifbachelor \pagebreak \fi \fi
+    % \ifbachelor \pagebreak \fi
+    \iflehramt \pagebreak \fi
+    \ifinfo \pagebreak \fi
+    \ifmaster \pagebreak \fi
+    \ifkogwiss \pagebreak \fi
     \input{src/mailinglisten}
     \pagebreak
     \input{src/tuebingen}
