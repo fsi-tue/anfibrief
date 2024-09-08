@@ -26,4 +26,5 @@ jobs:
         if: ${{ github.repository_owner == 'fsi-tue' && github.ref == 'refs/heads/master' }}
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
         run: .github/scripts/deploy.sh

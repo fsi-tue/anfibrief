@@ -7,6 +7,7 @@ umask 0077
 
 SFTP_USER="anfibrief-cd"
 HOST="teri.fsi.uni-tuebingen.de"
+PORT="${SSH_PORT}"
 TARGET_DIRECTORY="www"
 KNOWN_HOSTS="
 dGVyaS5mc2kudW5pLXR1ZWJpbmdlbi5kZSBzc2gtcnNhIEFBQUFCM056YUMxeWMyRUFBQUFEQVFB\
@@ -30,5 +31,5 @@ put anfibrief/.BUILDINFO
 chmod 644 *
 EOF
 
-sftp -i /tmp/id_rsa -b sftp-commands "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
+sftp -i /tmp/id_rsa -P "${PORT}" -b sftp-commands "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
 rm /tmp/id_rsa
