@@ -95,13 +95,16 @@
 
 % Erste Vorlesung
 \ifbachelor
-    \item[Erste Vorlesung -- Montag, 14. April \YEAR, \ifwintersemester 8:00 Uhr, \else 10:00 Uhr, \fi Morgenstelle]~\\
-    Deine erste Vorlesung beginnt um
-    \ifwintersemester 8:00 Uhr -- Du hast „Mathematik für Informatik 1“  \fi
-    \ifsommersemester 10:00 Uhr -- Du hast „Mathematik für Informatik 2“  \fi
-    bei \Matheprof.
-    Alles, was du heute (und in Zukunft) benötigst: persönlichen Wachmacher, einen Stift, einen Block und den Studierendenausweis.\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
+	\iflehramt  %if Lehramt auskommentieren im Wintersemester
+	\else
+		\item[Erste Vorlesung -- Montag, 14. April \YEAR, \ifwintersemester 8:00 Uhr, \else 10:00 Uhr, \fi Morgenstelle]~\\
+    			Deine erste Vorlesung beginnt um
+    			\ifwintersemester 8:00 Uhr -- Du hast „Mathematik für Informatik 1“  \fi
+    			\ifsommersemester 10:00 Uhr -- Du hast „Mathematik für Informatik 2“  \fi
+    			bei \Matheprof.
+    			Alles, was du heute (und in Zukunft) benötigst: persönlichen Wachmacher, einen Stift, einen Block und den Studierendenausweis.\\
+    			\seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
+	\fi
 \fi
 
 %Spieleabend 1
