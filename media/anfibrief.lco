@@ -3,13 +3,14 @@
 
 \usepackage{xcolor}
 \definecolor{navy}{RGB}{0, 0, 128}
+\definecolor{green}{RGB}{0,128,0}
 
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[scaled]{berasans}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{fontawesome} % Icons in Adresskopf
+\usepackage{fontawesome5} % Icons in Adresskopf
 \renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{geometry}
@@ -32,7 +33,11 @@
 \renewcommand*{\raggedsignature}{\raggedright}
 %\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
 %\addtolength{\oddsidemargin}{-1in}
-\newcommand{\seticon}[1]{\textcolor{navy}{\csname #1\endcsname}}
+\ifkogwiss
+	\newcommand{\seticon}[1]{\textcolor{green}{\csname #1\endcsname}}
+\else
+	\newcommand{\seticon}[1]{\textcolor{navy}{\csname #1\endcsname}}
+\fi
 
 \setkomavar{place}{\hskip -5pt plus -1fill Tübingen}
 
@@ -67,7 +72,7 @@
 	\parbox{\textwidth}{%
 	\ifpdf%
 	\if@logo%
-	\includegraphics[width=85mm, keepaspectratio=true]{media/fsilogo.pdf}%
+	\includegraphics[width=85mm, keepaspectratio=true]{media/kognilogo_landscape.pdf}%
 	\else%
 	\includegraphics[width=78mm, keepaspectratio=true]{logo_sw.pdf}%
 	\fi%
@@ -100,10 +105,10 @@
 	\setkomavar{fromaddress}{Fachschaft Kognitionswissenschaft\\Sand 14\\72076 Tübingen}
 	\setkomavar{backaddress}{\textbf{Uni Tübingen}\\ \usekomavar{fromaddress}}
 	\setkomavar{location}{\large\setstretch{1.20}%
-	\textbf{\if@logo\color{navy}\fi%
+	\textbf{\if@logo\color{green}\fi%
 	Universität Tübingen}\par\medskip
 	\setstretch{1.1}\footnotesize%
-	\textbf{\if@logo\color{navy}\fi%
+	\textbf{\if@logo\color{green}\fi%
 	Fachbereich Informatik\\
 	(Wilhelm-Schickard-Institut)\\
 	~\\
@@ -113,6 +118,7 @@
 	\seticon{faAt} \quad kogni-fachschaft@fsi.uni-tuebingen.de \\
 	\seticon{faAt} \quad kogni-beratung@fsi.uni-tuebingen.de \\
 	\seticon{faGlobe} \quad www.fs-kogni.uni-tuebingen.de\\
+	\seticon{faInstagram} \quad @fsk.tuebingen\\
 	\\ 
 	\seticon{faMapMarker} \quad Sand 14, Raum C102 \\ 
 	\hspace*{1em}\quad 72076 Tübingen
@@ -167,6 +173,8 @@
 	  \seticon{faPhone} \quad +49 7071 29-70413 \\
 	  \seticon{faAt} \quad fsi@fsi.uni-tuebingen.de \\
 	  \seticon{faGlobe} \quad  www.fsi.uni-tuebingen.de\\
+	  \seticon{faInstagram} \quad @fsi\_tuebingen\\
+	  \seticon{faMastodon} \quad @fsi@toot.kif.rocks\\
 	  \\ 
 	  \seticon{faMapMarker} \quad Sand 14, Raum C125 \\ 
 	  \hspace*{1em}\quad 72076 Tübingen
