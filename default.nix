@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     then fetchTarball srcUrl
     else lib.cleanSource ./.;
 
-  nativeBuildInputs = [ inkscape pdftk
+  nativeBuildInputs = [ git inkscape pdftk
     (texlive.combine {
       inherit (texlive) scheme-minimal latexmk latexconfig latex latex-bin
         koma-script
