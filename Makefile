@@ -59,8 +59,14 @@ all: wintersemester
 
 # A variable that later acts as a user-defined function
 # "(call variable,parameter)"
-env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
-	sed -E -i '' 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+ifeq ($(shell uname), Darwin)
+	env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
+		sed -E -i '' 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+else
+	env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
+		sed -E -i 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+endif
+
 # A little (possibly dirty) hack to execute the env-update target every time at
 # the beginning. This target updates the LaTeX variables in env.tex but only
 # modifies the file if they actually differ (modifying the file causes the
