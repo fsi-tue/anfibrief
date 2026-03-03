@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the source-code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup (Nixpkgs config and NIXPKGS_COMMIT)
         run: echo "NIXPKGS_COMMIT=$(curl -L 'https://channels.nixos.org/nixos-unstable/git-revision')" >> $GITHUB_ENV
       - name: Install Nix
-        uses: cachix/install-nix-action@v12
+        uses: cachix/install-nix-action@v24 
         with:
           nix_path: nixpkgs=https://github.com/NixOS/nixpkgs/archive/${{ env.NIXPKGS_COMMIT }}.tar.gz
       - name: Build the Anfibriefe
@@ -18,7 +18,7 @@ jobs:
           nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)" --arg doCheck true
           mkdir anfibrief && cp result/* .BUILDINFO anfibrief/
       - name: Upload the Anfibriefe (GitHub artifacts)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: anfibrief
           path: anfibrief/
