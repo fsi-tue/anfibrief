@@ -1,5 +1,5 @@
 
-% Roter Kasten mir Corona Disclaimer und anmeldung für events.
+% Roter Kasten: anmeldung für events.
 \setlength{\fboxrule}{4pt}
     \fcolorbox{red}{white}{
         \begin{minipage}[t]{\textwidth}
@@ -17,7 +17,7 @@
                 \textbf{Bitte melde dich zu allen Veranstaltungen an}, außer es steht explizit dabei, dass keine Anmeldung notwendig ist.
                 Die Anmeldung ist in der Regel ab einer Woche vor der jeweiligen Veranstaltung möglich.\\
                 Falls du dich zu einer Veranstaltung angemeldet hast und doch nicht kommen wirst, dann melde dich bitte auch wieder ab.
-                Weitere Details und die Anmeldung zur jeweiligen Veranstaltung  findest du auch immer auf \url{https://eei.fsi.uni-tuebingen.de}.
+                Weitere Details und die Anmeldung zur jeweiligen Veranstaltung  findest du auch immer auf ~\url{https://eei.fsi.uni-tuebingen.de}.
             \fi
         \end{minipage}}
 \begin{description}
@@ -93,138 +93,165 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ab hier die FSI Events einfügen. Darüber sind der Mathe und Info vorkurs.
 
-%Spieleabend 1
-\ifml
-    \item[Board Game Night 1 -- Wednesday, October 1st \YEAR, Sand]~\\%, 19:00, Sand]~\\
-    We'd like to invite you to a board game night in relaxed atmosphere at the Sand.
-    We'll provide some games as well as drinks and snacks (for a small donation).
-    Even though our collection is growing steadily, we're more than happy if you bring along your own games!\\
-    \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-\else
-    \item[Spieleabend 1 -- Mittwoch, 1. Oktober \YEAR, Sand]~\\%, 19:00 Uhr, Sand]~\\
-    Wir möchten dich zu einem kleinen Analog-Spieleabend mit guter Gesellschaft und entspannter Atmosphäre auf dem Sand einladen.
-    Für einige Spiele sowie Getränke und Knabberkram (gegen einen kleinen Obolus) sorgt die Fachschaft.
-    Wir freuen uns natürlich sehr, wenn du auch eigene Spiele mitbringst, obwohl unsere Sammlung schon beachtlich ist!\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-\fi
-
-% Kneipentour 1 % TODO Uhrzeit
-\ifml
-    \item[Pub Crawl 1 -- Tuesday, October 7th \YEAR]~\\
-    Tübingen is a town full of small pubs and bars that characterize the nightlife.
-    To calm down from the stress of this information-filled day, we'd like to invite you to go bar-hopping with us.
-    We'll divide up into small groups and visit the different bars in the historic town center.
-    Please bring enough cash, most places we will visit don't accept cards (\emph{none whatsoever}).
-\else
-    \item[Kneipentour 1 -- Dienstag, 7. Oktober \YEAR]~\\
-    Tübingen ist übersät mit kleinen Kneipen und Bars, die das Nachtleben maßgeblich bestimmen.
-    Um den Stress der ersten Veranstaltungen etwas sacken zu lassen, laden wir dich zu einer ausgiebigen Kneipentour ein,
-    bei der wir in Kleingruppen die verschiedenen Lokalitäten der Tübinger Altstadt besuchen.
-    Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars mit EC-Karte zahlen! -- Volksbanken und Sparkassen finden sich bei Bedarf in der Stadt.
-\fi
-
-%Mastercafé
-\ifmaster
-    \ifml
-        \item[Mastercafé -- Thursday, October 9th \YEAR, 14:30, Sand, A301/A302]\ \\
-        At this informal meeting you will have the opportunity to get to know your fellow students and some of the lecturers over a coffee. And then there will be cake.\footnote{This is not a lie!}\\
-        % \seticon{faBus}~\textbf{bus stop:} route 3, "`Maria-von-Linden-Straße"' (signposted from there)
-        \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-   \else
-        \item[Mastercafé -- Donnerstag, 9. Oktober \YEAR, 14:30 Uhr, Sand, A301/A302]\ \\
-        Bei diesem informellen Treffen hast du Gelegenheit, neue Master-Studierende aus deinem eigenen und auch aus anderen Studiengängen sowie einige der Dozierenden bei Kaffee kennenzulernen. Und dann gibt es Kuchen.\footnote{Das ist keine Lüge!}\\
-        \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-   \fi
-\fi
-
-% Nur damit die Seite richtig gebrochen wird.
-% TODO: Muss jedes jahr angepasst werden.
-\ifmaster \ifinfo \iflehramt \else \pagebreak \fi \fi \fi
-\ifmaster \ifmedien \pagebreak \fi \fi
-\ifmaster \ifmedinfo \pagebreak \fi \fi
-\ifmaster \ifkogwiss \pagebreak \fi \fi
-
-% Facheinführung
-\ifml
-    \item[Subject Introduction -- Thursday, October 9th to Friday, October 10th \YEAR]\ \\ 
-    Subject Introduction where you will receive important information about your course of study. You can find the date for your subject at \url{https://uni-tuebingen.de/de/197597}.
-    We recommend attending to make the start of your studies easier.
-\else    
-    \item[Facheinführung -- Donnerstag, 09. Oktober bis Freitag, 10. Oktober \YEAR]\ \\ 
-    Fächerspezifische Einführungsveranstaltung, in der du wichtige Informationen zum Studienverlauf erhältst. Den Termin für dein Fach findest du am besten auf \url{https://uni-tuebingen.de/de/197597}.
-    Wir empfehlen dir die Teilnahme, um deinen Studienstart zu erleichtern.
-\fi
-
-% Frühstück
-\ifbachelor
-    \item[Frühstück -- Freitag, 10. Oktober \YEAR, 10:00 Uhr, Mensa Morgenstelle]\ \\
-    Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten erwartet -- auch im Gespräch mit älteren Studierenden.
-    Danach machen wir eine Führung über die Morgenstelle, damit du die wichtigsten Räume und Hörsäle kennenlernst.
-    Wenn du Lust hast, kannst du anschließend ab 11:45 Uhr das Mensaessen ausprobieren.\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
-\fi
-
-\ifbachelor \pagebreak \fi
-
-% Semestereröffnung
-\ifml
-    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
-    \item[\parbox{\linewidth}{Semester Opening by Faculty -- Friday, October 10th \YEAR, 16:15,\\ EG, Maria-von-Linden-Str.1}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
-    This department information event with presentation of all elective courses in the winter
-    semester is especially useful if you are new to Tübingen and want to get a first impression
-    of the professors and courses you will be dealing with in the future.\\
-    \seticon{faBus}~\textbf{bus stop:} Sternwarte (bus line 3)
-\else
-    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
-    \item[\parbox{\linewidth}{Semestereröffnung Fachbereich -- Freitag, 10. Oktober \YEAR, 16:15 Uhr,\\ EG Maria-von-Linden-Str.1}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
-    Informationsveranstaltung des Fachbereichs mit Vorstellung aller
-    Wahlveranstaltungen im Wintersemester.
-    \ifbachelor
-        Die Veranstaltung richtet sich vor allem an höhere Semester,
-        wer als hochmotivierter Bachelor-Ersti Informationen sammeln will, darf natürlich dennoch vorbeischauen.
-    \else
-        Diese Veranstaltung ist besonders sinnvoll, wenn du neu nach Tübingen kommst um dir ein erstes Bild davon zu machen,
-        mit welchen Professoren und Veranstaltungen du es zukünftig zu tun hast.
-    \fi
-    \seticon{faBus}~\textbf{Bushaltestelle:} Sternwarte (Linie 3)
-\fi
-
 % Grillen 1
 \ifml
-    \item[BBQ 1 -- Friday, October 10th \YEAR, 18:30, in the garden of the Sand]~\\
+    \item[BBQ 1 -- Tuesday, March 31th \YEAR, 18:30, in the garden of the Sand]~\\
     You're not in the mood for cooking this evening? Fear not!
     The student council invites you for a BBQ. Bring whatever you want to put on the grill,
     please also bring your own plates and cutlery. The garden has enough space for stuff like volleyball, football etc. as well.\\
     \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
 \else
-    \item[Grillen 1 -- Freitag, 10. Oktober \YEAR, 18:30 Uhr, im Garten des Sandes]~\\
+    \item[Grillen 1 -- Dienstag, 31. März \YEAR, 18:30 Uhr, im Garten des Sandes]~\\
     Du hast keinen Bock auf Kochen? Dann bist du hier genau richtig! In geselliger Runde wird die Fachschaft mit dir grillen.
     Bring dazu mit, was auch immer du zum Grillen brauchst, ein großer Gasgrill wartet auf dich. Vergiss bitte auch nicht, dein eigenes Besteck und Geschirr einzupacken!\\
     Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!\\
     \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
 
+%WENN Bioinfo-Master
+\ifmaster
+    \ifbinfo
+        \pagebreak
+    \fi
+\fi
+
+%Spieleabend 1
+\ifml
+    \item[Board Game Night 1 -- Wednesday, April 1st \YEAR, Sand]~\\%, 19:00, Sand]~\\
+    We'd like to invite you to a board game night in relaxed atmosphere at the Sand.
+    We'll provide some games as well as drinks and snacks (for a small donation).
+    Even though our collection is growing steadily, we're more than happy if you bring along your own games!\\
+    \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
+\else
+    \item[Spieleabend 1 -- Mittwoch, 1. April \YEAR, Sand]~\\%, 19:00 Uhr, Sand]~\\
+    Wir möchten dich zu einem kleinen Analog-Spieleabend mit guter Gesellschaft und entspannter Atmosphäre auf dem Sand einladen.
+    Für einige Spiele sowie Getränke und Knabberkram (gegen einen kleinen Obolus) sorgt die Fachschaft.
+    Wir freuen uns natürlich sehr, wenn du auch eigene Spiele mitbringst, obwohl unsere Sammlung schon beachtlich ist!\\
+    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\fi
+
+%Mastercafé
+\ifmaster
+    \ifml
+        \item[Mastercafé -- Thursday, April 9th \YEAR, 14:30, MvL1, 6th floor]\ \\
+        At this informal meeting you will have the opportunity to get to know your fellow students and some 
+        of the lecturers over a coffee. And then there will be cake.\footnote{This is not a lie!}\\
+        % \seticon{faBus}~\textbf{bus stop:} route 3, "`Maria-von-Linden-Straße"' (signposted from there)
+        \seticon{faBus}~\textbf{bus stop:} Sternwarte (bus line 3)
+   \else
+        \item[Mastercafé -- Donnerstag, 9. April \YEAR, 14:30 Uhr, MvL1, Etage 6]\ \\
+        Bei diesem informellen Treffen hast du Gelegenheit, neue Master-Studierende aus deinem eigenen 
+        und auch aus anderen Studiengängen sowie einige der Dozierenden bei Kaffee kennenzulernen. Und dann gibt es Kuchen.
+        \footnote{Das ist keine Lüge!}\\
+        \seticon{faBus}~\textbf{Bushaltestelle:} Sternwarte (Linie 3)
+   \fi
+\fi
+
+%WENN Master ABER NICHT Bioinformatik
+\ifmaster
+    \ifbinfo
+        \else
+        \pagebreak
+    \fi
+\fi
+
+% Frühstück
+\ifml
+    \item[Breakfast -- Friday, April 10th \YEAR, 10:00, Sand]\ \\
+    We invite you to a cozy breakfast this morning! During this time, you'll learn a lot 
+    about the university, the student council, and what to expect in the coming months—also 
+    through conversations with senior students. Right after, you can attend the official introductory event 
+    for first-year students in the Department of Computer Science. We've set aside enough time for this.
+    To plan better and reserve spots, we kindly ask you to let us know if you're coming. \\
+    \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
+\else
+    \item[Frühstück -- Freitag, 10. April \YEAR, 10:00 Uhr, Mensa Morgenstelle]\ \\
+    Wir laden dich an diesem Morgen zu einem gemütlichen Frühstück ein! 
+    Dabei erfährst du einiges über die Uni, die Fachschaft und was dich in den nächsten Monaten 
+    erwartet – auch im Gespräch mit älteren Studierenden. Direkt im Anschluss kannst du dann noch 
+    zur offizielle Erstsemesterbegrüßung des Fachbereichs Informatik. Wir haben extra genug Zeit eingeplant.
+    Um besser planen und Plätze reservieren zu können, bitten wir euch Bescheid zu geben, wenn ihr kommt. \\
+    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\fi
+
+\ifbachelor
+    \pagebreak
+\fi
+
+% Facheinführung
+\ifml
+    \item[Subject Introduction -- TBA]\ \\ 
+    Subject Introduction where you will receive important information about your course of study. You can find the date for your subject at \url{https://uni-tuebingen.de/de/197597}.
+    We recommend attending to make the start of your studies easier.
+\else    
+    \item[Facheinführung -- TBA]\ \\ 
+    Fächerspezifische Einführungsveranstaltung, in der du wichtige Informationen zum Studienverlauf erhältst. Den Termin für dein Fach findest du am besten auf \url{https://uni-tuebingen.de/de/197597}.
+    Wir empfehlen dir die Teilnahme, um deinen Studienstart zu erleichtern.
+\fi
+
+% Semestereröffnung
+\ifml
+    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
+    \item[\parbox{\linewidth}{Semester Opening by Faculty -- Friday, April 10th \YEAR, 16:00, EG, MvL1}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
+    This department information event with presentation of all elective courses in the summer
+    semester is especially useful if you are new to Tübingen and want to get a first impression
+    of the professors and courses you will be dealing with in the future.\\
+    \seticon{faBus}~\textbf{bus stop:} Sternwarte (bus line 3)
+\else
+    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
+    \item[\parbox{\linewidth}{Semestereröffnung Fachbereich -- Freitag, 10. April \YEAR, 16:00 Uhr, EG MvL1}]\ \vspace{.355\baselineskip} \\ % parbox and vspace since the line is too long
+    Informationsveranstaltung des Fachbereichs mit Vorstellung aller
+    Wahlveranstaltungen im Sommersemester.
+    \ifbachelor
+        Die Veranstaltung richtet sich vor allem an höhere Semester,
+        wer als hochmotivierter Bachelor-Ersti Informationen sammeln will, darf natürlich dennoch vorbeischauen.
+    \else
+        Diese Veranstaltung ist besonders sinnvoll, wenn du neu nach Tübingen kommst um dir ein erstes Bild davon zu machen,
+        mit welchen Professoren und Veranstaltungen du es zukünftig zu tun hast.
+    \fi \\
+    \seticon{faBus}~\textbf{Bushaltestelle:} Sternwarte (Linie 3)
+\fi
+
+% Grillen 2
+\ifml
+    \item[BBQ 2 -- Friday, April 10th \YEAR, 18:30, in the garden of the Sand]~\\
+    Because it's so nice, we'll have another barbecue!
+    Bring whatever you'd like to grill, and don’t forget your own plates and cutlery!\\
+    You can also play volleyball, football, and more in the garden. We’re looking forward to seeing you there!\\
+    \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
+\else
+    \item[Grillen 2 -- Freitag, 10. April \YEAR, 18:30 Uhr, im Garten des Sandes]~\\
+    Und weils so schön ist, grillen wir nochmal!
+    Bring mit, was auch immer du grillen möchtest. Eigenes Besteck und Geschirr bitte nicht vergessen!\\
+    Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!\\
+    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\fi
+
 %Wanderung 1
 \ifml
-	\item[Hike 1 -- Saturday, October 11th \YEAR, 10:30, on the Neckarinsel (Neckar Island)]~\\
+	\item[Hike 1 -- Saturday, April 11th \YEAR, 10:30, on the Neckarinsel (Neckar Island)]~\\
 	On a leisurely hike you will get to know not only your fellow students,
 	but also a few lecturers and the worthwhile surroundings of Tübingen!
-	% The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq.\\
 	The meeting point is on the Neckarinsel.\\
 	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1--22)
 \else
-	\item[Wanderung 1 -- Samstag, 11. Oktober \YEAR, 10:30 Uhr, auf der Neckarinsel]~\\
+	\item[Wanderung 1 -- Samstag, 11. April \YEAR, 10:30 Uhr, auf der Neckarinsel]~\\
 	Bei einer gemütlichen Wanderung lernt ihr neben euren Kommilitonen und Kommilitoninnen auch
 	noch ein paar Dozierende und die sehenswerte Tübinger Umgebung kennen!
-	% Der Treffpunkt ist bei der Neckarbrücke (\emph{vor} dem Gasthaus \glqq Neckarmüller\grqq).\\
 	Der Treffpunkt ist auf der Neckarinsel.\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Neckarbrücke (Linien 1--22)
 \fi
 
+%WENN Bioinfo-Master
+\ifmaster
+    \ifbinfo
+        \pagebreak
+    \fi
+\fi
 
 % Erste Vorlesung
 \ifbachelor
-    \item[Erste Vorlesung -- Montag, 13. Oktober \YEAR, \ifwintersemester 8:00 Uhr, \else 10:00 Uhr, \fi Morgenstelle]~\\
+    \item[Erste Vorlesung -- Montag, 13. April \YEAR, \ifwintersemester 8:00 Uhr, \else 10:00 Uhr, \fi Morgenstelle]~\\
     Deine erste Vorlesung beginnt um
     \ifwintersemester 8:00 Uhr -- Du hast „Mathematik für Informatik 1“  \fi
     \ifsommersemester 10:00 Uhr -- Du hast „Mathematik für Informatik 2“  \fi
@@ -233,68 +260,167 @@
     \seticon{faBus}~\textbf{Bushaltestelle:} BG Unfallklinik (Linien 5, 13, 14, 17, 18, 19, X15)
 \fi
 
-% Filmeabends % TODO date & time % TODO invite ML, movie language?
-\ifml
-    \item[Movie Night -- Tuesday, October 14th \YEAR, 19:15 Uhr, HS24 Kupferbau]~\\%, 19:00, Sand]~\\
-    % Falls im Wintersemester ein Filmeabend veranstaltet wird, sollte in der Einladung erwähnt werden, auf welcher
-    % Sprache der Film gezeigt wird.
-    In the evening, we're hosting a movie night, and we'd love for you to join us!
-    It'll be a great way to unwind after your first days of student life.
-    Bring your new friends, your favorite snacks and drinks, and let's go!\\
-    \seticon{faBus}~\textbf{bus stop:}  Hölderlinstraße, Uni/Neue Aula 
-\else
-    \item[Filmeabend -- Dienstag, 14. Oktober \YEAR, 19:15 Uhr, HS24 Kupferbau]~\\
-    Am Abend veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
-    Schaut mit uns einen Film an und entspannt euch nach euren ersten Tagen im Studileben.
-    Bringt eure neuen Freunde, Freundinnen, eure Lieblingssnacks \& -drinks mit und los geht's!\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} Hölderlinstraße, Uni/Neue Aula
-\fi
-
 %Spieleabend 2 %TODO time
 \ifml
-	\item[Board Game Night 2 -- Wednesday, October 15th \YEAR, Sand]~\\%, 19:00, Sand]~\\
+	\item[Board Game Night 2 -- Tuesday, April 14th \YEAR, Sand]~\\%, 19:00, Sand]~\\
 	We'd like to invite you to a board game night in relaxed atmosphere at the Sand.
 	We'll provide some games as well as drinks and snacks (for a small donation).
 	Even though our collection is growing steadily, we're more than happy if you bring along your own games!\\
 	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
 \else
-	\item[Spieleabend 2 -- Mittwoch, 15. Oktober \YEAR, Sand]~\\%, 19:00 Uhr, Sand]~\\
+	\item[Spieleabend 2 -- Dienstag, 14. April \YEAR, Sand]~\\%, 19:00 Uhr, Sand]~\\
 	Wir möchten dich zu einem kleinen Analog-Spieleabend mit guter Gesellschaft und entspannter Atmosphäre auf dem Sand einladen.
 	Für einige Spiele sowie Getränke und Knabberkram (gegen einen kleinen Obolus) sorgt die Fachschaft.
 	Wir freuen uns natürlich sehr, wenn du auch eigene Spiele mitbringst, obwohl unsere Sammlung schon beachtlich ist!\\
 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
 
-% Kogni Info Abend
-\ifkogwiss
-	\item[Kogni-FAQ-Abend -- Donnerstag, 16. Oktober \YEAR, Sand]~\\%, 18:30 Uhr, Sand
-	Falls ihr noch offene Fragen über das Studium oder zur (oftmals unübersichtlichen) Organisation habt, 
-    könnt ihr diese hier andere Studierende stellen. Außerdem geben wir ein paar Tipps, die wir gerne auch als Ersti gehört hätten.
-    Natürlich könnt ihr auch einfach zum Zuhören dazu kommen.\\
-	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+% Kneipentour 1
+\ifml
+    \item[Pub Crawl -- Friday, April 17th \YEAR]~\\
+    Tübingen is a town full of small pubs and bars that characterize the nightlife.
+    To calm down from the stress of this information-filled day, we'd like to invite you to go bar-hopping with us.
+    We'll divide up into small groups and visit the different bars in the historic town center.
+    Please bring enough cash, most places we will visit don't accept cards. \\
+    Registration is mandatory here -- only then will you receive the meeting point of your group via email.
+\else
+    \item[Kneipentour -- Freitag, 17. April \YEAR]~\\
+    Tübingen ist übersät mit kleinen Kneipen und Bars, die das Nachtleben maßgeblich bestimmen.
+    Um den Stress der ersten Veranstaltungen etwas sacken zu lassen, laden wir dich zu einer ausgiebigen Kneipentour ein,
+    bei der wir in Kleingruppen die verschiedenen Lokalitäten der Tübinger Altstadt besuchen.
+    Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars mit EC-Karte zahlen! -- Volksbanken und Sparkassen finden sich bei Bedarf in der Stadt. \\
+    \textbf{Anmeldung} ist hier Pflicht - nur dann erhältst du per Mail passend den Treffpunkt deiner Gruppe mitgeteilt.
 \fi
 
-\ifmaster \ifkogwiss \pagebreak \fi \fi
-
-% Kneipentour 2 % TODO Uhrzeit
-\ifml
-	\item[Pub Crawl 2 -- Friday, October 17th \YEAR]~\\
-	Ready for round two? Join us for another pub crawl through Tübingen's best spots.
-	We'll split into smaller groups again and visit the different bars in the historic town center.
-	Please bring enough cash, most places we will visit don't accept cards (\emph{none whatsoever}).
+%WENN NICHT Bioinfo-Master
+\ifmaster
+    \ifbinfo
+    \else
+        \pagebreak
+    \fi
 \else
-	\item[Kneipentour 2 -- Freitag, 17. Oktober \YEAR]~\\
-	Bereit für Runde Zwei? Komm mit auf eine weitere Kneipentour durch die besten Kneipen Tübingens.
-	Wir werden uns wieder in kleinere Gruppen aufteilen und die verschiedenen Bars in der Altstadt besuchen.
-	Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars mit EC-Karte zahlen! -- Volksbanken und Sparkassen 	finden sich bei Bedarf in der Stadt.
+    \pagebreak
+\fi
+
+%Wanderung 2
+\ifml
+	\item[Hike 2 -- Sunday, April 19th \YEAR, 10:30, on the Neckarinsel (Neckar Island)]~\\
+	Time for another hike! Join us for a relaxing stroll through the beautiful Tübingen countryside.
+	This is a great chance to enjoy nature, chat with fellow students, and maybe even meet some of your professors.
+	% The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq.\\
+	The meeting point is on the Neckarinsel.\\
+	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1--22)
+\else
+	\item[Wanderung 2 -- Sonntag, 19. April \YEAR, 10:30 Uhr, auf der Neckarinsel]~\\
+	Zeit für eine weitere Wanderung! Komm mit auf einen entspannten Spaziergang durch die schöne Umgebung Tübingens.
+	Bei einer gemütlichen Wanderung lernt ihr eure Kommilitonen und Kommilitoninnen
+	und vielleicht auch ein paar Dozierende kennen!
+	% Der Treffpunkt ist bei der Neckarbrücke (\emph{vor} dem Gasthaus \glqq Neckarmüller\grqq).\\
+	Der Treffpunkt ist auf der Neckarinsel.\\
+	\seticon{faBus}~\textbf{Bushaltestelle:} Neckarbrücke (Linien 1--22)
+\fi
+
+
+%Clubhausfest
+\ifml
+    \item[Clubhausfest -- Thursday, April 30th \YEAR, 21:00, Clubhaus]\ \\
+    Every thursday during the lecture period, a different student body or group of students organizes the "`Clubhaus Fest"' in
+    the Clubhaus, which locates directly opposite of the new auditorium. Today the attendance is particularly worthwhile, because
+    the student councils of computer science, cognitive science and psychology are hosting the event! \\
+    No registration necessary.\\
+    \seticon{faBus}~\textbf{bus stop:} Uni/Neue Aula or Hölderlinstraße
+\else
+    \item[Clubhausfest -- Donnerstag, 30. April \YEAR, 21:00 Uhr, Clubhaus]\ \\
+    Während der Vorlesungszeit richtet jeden Donnerstag eine andere Fachschaft oder studentische Gruppierung das Clubhausfest
+    im Clubhaus, direkt gegenüber der Neuen Aula, aus. Heute lohnt sich der Besuch jedoch ganz besonders, denn die Fachschaften
+    Informatik, Kogni und Psychologie sind Gastgeber!\\ % \\ % TODO line break wieder einfügen: Eigentlich wäre hier ein line break schöner, aber im WS24 würde dann eine einzelne Zeile auf die nächste Seite kommen
+    Keine Anmeldung nötig.\\
+    %Das anfängliche Chaos des Vorlesungsbeginns hat sich gelegt und auch an diesem Donnerstag findet das Clubhausfest statt.\\
+    \seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula oder Hölderlinstraße
+\fi
+
+
+%Schnuppersitzung % TODO date & time
+\ifkogwiss
+    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
+     \item[\parbox{\linewidth}{Schnuppersitzung der fsk -- Donnerstag, 20. November \YEAR, 18:30 \\ 
+        (reguläre Sitzungen: Donnerstags, 18:30, vor dem Kogni Zimmer), Sand}]\ \vspace{.355\baselineskip} \\
+        Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
+        Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
+        sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
+     Komm doch einfach mal zu unserer Schnuppersitzung
+     \footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
+        und schau ob es dir gefällt!\\
+        Keine Anmeldung nötig.\\
+        \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+\else
+        \item[Schnuppersitzung der \textit{fsi} -- Donnerstag, 19. April \YEAR, 18:30 Uhr, Sand]\ \\ 
+        Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
+        Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
+        sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
+        Komm doch einfach mal zu unserer Schnuppersitzung\footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
+        und schau ob es dir gefällt!\\
+        Keine Anmeldung nötig.\\
+        \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
 \fi
 
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
-\ifkogwiss
-\else
-    \ifbachelor \pagebreak \fi
-\fi
+% \ifmaster \ifinfo \iflehramt \else \pagebreak \fi \fi \fi
+% \ifmaster \ifmedien \pagebreak \fi \fi
+% \ifmaster \ifmedinfo \pagebreak \fi \fi
+% \ifmaster \ifkogwiss \pagebreak \fi \fi
+
+% \ifbachelor \pagebreak \fi
+
+
+% Filmeabends % TODO date & time % TODO invite ML, movie language?
+% \ifml
+%     \item[Movie Night -- Tuesday, October 14th \YEAR, 19:15 Uhr, HS24 Kupferbau]~\\%, 19:00, Sand]~\\
+%     % Falls im Wintersemester ein Filmeabend veranstaltet wird, sollte in der Einladung erwähnt werden, auf welcher
+%     % Sprache der Film gezeigt wird.
+%     In the evening, we're hosting a movie night, and we'd love for you to join us!
+%     It'll be a great way to unwind after your first days of student life.
+%     Bring your new friends, your favorite snacks and drinks, and let's go!\\
+%     \seticon{faBus}~\textbf{bus stop:}  Hölderlinstraße, Uni/Neue Aula 
+% \else
+%     \item[Filmeabend -- Dienstag, 14. Oktober \YEAR, 19:15 Uhr, HS24 Kupferbau]~\\
+%     Am Abend veranstalten wir unseren Filmeabend und wir laden euch herzlich dazu ein!\\
+%     Schaut mit uns einen Film an und entspannt euch nach euren ersten Tagen im Studileben.
+%     Bringt eure neuen Freunde, Freundinnen, eure Lieblingssnacks \& -drinks mit und los geht's!\\
+%     \seticon{faBus}~\textbf{Bushaltestelle:} Hölderlinstraße, Uni/Neue Aula
+% \fi
+
+% Kogni Info Abend
+% \ifkogwiss
+% 	\item[Kogni-FAQ-Abend -- Donnerstag, 16. Oktober \YEAR, Sand]~\\%, 18:30 Uhr, Sand
+% 	Falls ihr noch offene Fragen über das Studium oder zur (oftmals unübersichtlichen) Organisation habt, 
+%     könnt ihr diese hier andere Studierende stellen. Außerdem geben wir ein paar Tipps, die wir gerne auch als Ersti gehört hätten.
+%     Natürlich könnt ihr auch einfach zum Zuhören dazu kommen.\\
+% 	\seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+% \fi
+
+% \ifmaster \ifkogwiss \pagebreak \fi \fi
+
+% Kneipentour 2 % TODO Uhrzeit
+% \ifml
+% 	\item[Pub Crawl 2 -- Friday, October 17th \YEAR]~\\
+% 	Ready for round two? Join us for another pub crawl through Tübingen's best spots.
+% 	We'll split into smaller groups again and visit the different bars in the historic town center.
+% 	Please bring enough cash, most places we will visit don't accept cards (\emph{none whatsoever}).
+% \else
+% 	\item[Kneipentour 2 -- Freitag, 17. Oktober \YEAR]~\\
+% 	Bereit für Runde Zwei? Komm mit auf eine weitere Kneipentour durch die besten Kneipen Tübingens.
+% 	Wir werden uns wieder in kleinere Gruppen aufteilen und die verschiedenen Bars in der Altstadt besuchen.
+% 	Bitte bringe genügend Bargeld mit, man kann in fast keiner der Tübinger Bars mit EC-Karte zahlen! -- Volksbanken und Sparkassen 	finden sich bei Bedarf in der Stadt.
+% \fi
+
+% Nur damit die Seite richtig gebrochen wird.
+% TODO: Muss jedes jahr angepasst werden.
+% \ifkogwiss
+% \else
+%     \ifbachelor \pagebreak \fi
+% \fi
 % \ifmaster \ifinfo \iflehramt \else \pagebreak \fi \fi \fi
 % \ifmaster \ifmedien \pagebreak \fi \fi
 % \ifmaster \ifmedinfo \pagebreak \fi \fi
@@ -338,35 +464,20 @@
 % TODO: Muss jedes jahr angepasst werden.
 % \ifmaster \ifbinfo \else \ifml \else \pagebreak \fi \fi \fi
 
-% Grillen 2
-\ifml
-    \item[BBQ 2 -- Saturday, October 18th \YEAR, 18:30, in the garden of the Sand]~\\
-    Because it's so nice, we'll have another barbecue!
-    Bring whatever you'd like to grill, and don’t forget your own plates and cutlery!\\
-    You can also play volleyball, football, and more in the garden. We’re looking forward to seeing you there!\\
-    \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-\else
-    \item[Grillen 2 -- Samstag, 18. Oktober \YEAR, 18:30 Uhr, im Garten des Sandes]~\\
-    Und weils so schön ist, grillen wir nochmal!
-    Bring mit, was auch immer du grillen möchtest. Eigenes Besteck und Geschirr bitte nicht vergessen!\\
-    Auf dem Sand ist es auch möglich Volleyball, Fußball, usw. zu spielen. Wir freuen uns auf dich!\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-\fi
-
 %Flunkyball
-\ifml
-	\item[Flunkyball -- Tuesday, October 21st \YEAR, Sand]~\\
-	Fancy a round of flunkyball? Come along, grab a bottle and have fun!
-	Perfect opportunity to switch off and meet new people.
-	Teams can be formed spontaneously and you can get beer from us for a small donation.\\
-	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-\else
-	\item[Flunkyball -- Dienstag, 21. Oktober \YEAR, Sand]~\\
-	Lust auf 'ne Runde Flunkyball? Komm vorbei, schnapp dir 'ne Flasche und hab Spaß!
-	Perfekte Gelegenheit, um abzuschalten und neue Leute kennenzulernen.
-	Teams können spontan gebildet werden und Bier kannst du von uns gegen eine kleine Spende bekommen.\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-\fi
+% \ifml
+% 	\item[Flunkyball -- Tuesday, October 21st \YEAR, Sand]~\\
+% 	Fancy a round of flunkyball? Come along, grab a bottle and have fun!
+% 	Perfect opportunity to switch off and meet new people.
+% 	Teams can be formed spontaneously and you can get beer from us for a small donation.\\
+% 	\seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
+% \else
+% 	\item[Flunkyball -- Dienstag, 21. Oktober \YEAR, Sand]~\\
+% 	Lust auf 'ne Runde Flunkyball? Komm vorbei, schnapp dir 'ne Flasche und hab Spaß!
+% 	Perfekte Gelegenheit, um abzuschalten und neue Leute kennenzulernen.
+% 	Teams können spontan gebildet werden und Bier kannst du von uns gegen eine kleine Spende bekommen.\\
+%     \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
+% \fi
 
 % % Capture the Flag
 % \ifml
@@ -382,89 +493,18 @@
 % \fi
 
 
-%Clubhausfest
-\ifml
-    \item[Clubhausfest -- Thursday, October 23rd \YEAR, 21:00, Clubhaus]\ \\
-    Every thursday during the lecture period, a different student body or group of students organizes the "`Clubhaus Fest"' in
-    the Clubhaus, which locates directly opposite of the new auditorium. Today the attendance is particularly worthwhile, because
-    the student councils of computer science, cognitive science and psychology are hosting the event! \\
-    No registration necessary.\\
-    \seticon{faBus}~\textbf{bus stop:} Uni/Neue Aula or Hölderlinstraße
-\else
-    \item[Clubhausfest -- Donnerstag, 23. Oktober \YEAR, 21:00 Uhr, Clubhaus]\ \\
-    Während der Vorlesungszeit richtet jeden Donnerstag eine andere Fachschaft oder studentische Gruppierung das Clubhausfest
-    im Clubhaus, direkt gegenüber der Neuen Aula, aus. Heute lohnt sich der Besuch jedoch ganz besonders, denn die Fachschaften
-    Informatik, Kogni und Psychologie sind Gastgeber!\\ % \\ % TODO line break wieder einfügen: Eigentlich wäre hier ein line break schöner, aber im WS24 würde dann eine einzelne Zeile auf die nächste Seite kommen
-    Keine Anmeldung nötig.\\
-    %Das anfängliche Chaos des Vorlesungsbeginns hat sich gelegt und auch an diesem Donnerstag findet das Clubhausfest statt.\\
-    \seticon{faBus}~\textbf{Bushaltestelle:} Uni/Neue Aula oder Hölderlinstraße
-\fi
-
-%Wanderung 2
-\ifml
-	\item[Hike 2 -- Saturday, October 25th \YEAR, 10:30, on the Neckarinsel (Neckar Island)]~\\
-	Time for another hike! Join us for a relaxing stroll through the beautiful Tübingen countryside.
-	This is a great chance to enjoy nature, chat with fellow students, and maybe even meet some of your professors.
-	% The meeting point is at the Neckarbrücke \emph{in front of the} restaurant \glqq Neckarmüller\grqq.\\
-	The meeting point is on the Neckarinsel.\\
-	\seticon{faBus}~\textbf{bus stop:} Neckarbrücke (lines 1--22)
-\else
-	\item[Wanderung 2 -- Samstag, 25. Oktober \YEAR, 10:30 Uhr, auf der Neckarinsel]~\\
-	Zeit für eine weitere Wanderung! Komm mit auf einen entspannten Spaziergang durch die schöne Umgebung Tübingens.
-	Bei einer gemütlichen Wanderung lernt ihr eure Kommilitonen und Kommilitoninnen
-	und vielleicht auch ein paar Dozierende kennen!
-	% Der Treffpunkt ist bei der Neckarbrücke (\emph{vor} dem Gasthaus \glqq Neckarmüller\grqq).\\
-	Der Treffpunkt ist auf der Neckarinsel.\\
-	\seticon{faBus}~\textbf{Bushaltestelle:} Neckarbrücke (Linien 1--22)
-\fi
-
-
 % Nur damit die Seite richtig gebrochen wird.
 % TODO: Muss jedes jahr angepasst werden.
 % \ifml \pagebreak \fi
 
-\ifml
-   % TODO?
-\else
-   \item[Erstihütte -- Freitag, 07. November bis Sonntag, 09. November \YEAR]~\\
-   Vom 07. bis 09. November fahren wir auf die Erstihütte in Dettingen.
-   Euch erwartet ein geselliges Programm und ein entspanntes Miteinander.
-   Weitere Informationen bezüglich Anmeldung folgen.
-\fi
-
-%Schnuppersitzung % TODO date & time
-\ifkogwiss
-    \vspace{-2.07182\baselineskip} \ \\ % to counteract the different spacing of the parbox in the line below. Remove this line if you remove the parbox and vspace in the line below
-     \item[\parbox{\linewidth}{Schnuppersitzung der fsk -- Donnerstag, 20. November \YEAR, 18:30 \\ (reguläre Sitzungen: Donnerstags, 18:30, vor dem Kogni Zimmer), Sand}]\ \vspace{.355\baselineskip} \\
-        Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
-        Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
-        sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
-     Komm doch einfach mal zu unserer Schnuppersitzung
-     \footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
-        und schau ob es dir gefällt!\\
-        Keine Anmeldung nötig.\\
-        \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-\else
-    \ifml
-        \item[fsi trial meeting -- TBA (regular meetings: Thursdays, 18:30, Sand, A104)]~\\%Thursday, May 18th \YEAR, 18:30, Sand]~\\
-        Hopefully, we were able to arouse your interest in student council work with our events.
-        But we do much more than just first-year events, we represent the students in committees,
-        we are contact persons, provide infrastructure and tools and much more.
-        Just come to our tryout meeting\footnote{Of course we are also very happy if you already come to regular meetings before the trial session}
-        and see if you like it!\\
-        No registration necessary.\\
-        \seticon{faBus}~\textbf{bus stop:} Sand Drosselweg (bus lines 2 \& 6)
-    \else
-        \item[Schnuppersitzung der fsi -- TBA (reguläre Sitzungen: Donnerstags, 18:30, A104, Sand)]~\\%Donnerstag, 18. Mai \YEAR, 18:30 Uhr, Sand]~\\
-        Hoffentlich konnten wir mit unseren Veranstaltungen euer Interesse an Fachschaftsarbeit wecken.
-        Wir machen aber noch viel mehr als nur Ersti-Veranstaltungen, wir vertreten die Studierenden in Gremien,
-        sind Ansprechpartner, stellen Infrastruktur und Tools bereit und vieles mehr.
-        Komm doch einfach mal zu unserer Schnuppersitzung\footnote{Natürlich freuen wir uns auch sehr, wenn du sogar schon vor der Schnuppersitzung zu regulären Sitzungen kommst :)}
-        und schau ob es dir gefällt!\\
-        Keine Anmeldung nötig.\\
-        \seticon{faBus}~\textbf{Bushaltestelle:} Sand Drosselweg (Linien 2 \& 6)
-    \fi
-\fi
+% \ifml
+%    % TODO?
+% \else
+%    \item[Erstihütte -- Freitag, 07. November bis Sonntag, 09. November \YEAR]~\\
+%    Vom 07. bis 09. November fahren wir auf die Erstihütte in Dettingen.
+%    Euch erwartet ein geselliges Programm und ein entspanntes Miteinander.
+%    Weitere Informationen bezüglich Anmeldung folgen.
+% \fi
 
 
 

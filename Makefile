@@ -60,7 +60,7 @@ all: wintersemester
 # A variable that later acts as a user-defined function
 # "(call variable,parameter)"
 env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
-	sed --regexp-extended --in-place 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+	sed -E -i '' 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
 # A little (possibly dirty) hack to execute the env-update target every time at
 # the beginning. This target updates the LaTeX variables in env.tex but only
 # modifies the file if they actually differ (modifying the file causes the
@@ -126,20 +126,20 @@ $(PDFDIR)/brief_%.pdf: $(LETTERDIR)/brief_%.tex plaene $(MEDIADIR)/fsilogo.pdf $
 # .aux, .log) wieder entfernt werden
 .PHONY: clean
 clean:
-	if [ -d $(OUTDIR) ]; then rm --recursive ./$(OUTDIR); fi
+	if [ -d $(OUTDIR) ]; then rm -r ./$(OUTDIR); fi
 	if [ -f src/envGitCommit.tex ]; then rm src/envGitCommit.tex; fi
 	if [ -f src/env.tex ]; then rm src/env.tex; fi
 
 # Mit diesem Target können alle erzeugten Dateien wieder entfernt werden
 .PHONY: mrproper
 mrproper: clean
-	if [ -d $(PDFDIR) ]; then rm --recursive ./$(PDFDIR); fi
+	if [ -d $(PDFDIR) ]; then rm -r ./$(PDFDIR); fi
 
 # Mit diesem Target können restlos alle erzeugten Dateien wieder entfernt
 # werden, d. h. auch die finalen Releases
 .PHONY: distclean
 distclean: mrproper
-	if [ -d $(RELEASEDIR) ]; then rm --recursive ./$(RELEASEDIR); fi
+	if [ -d $(RELEASEDIR) ]; then rm -r ./$(RELEASEDIR); fi
 
 
 # Mit diesem Target soll es *bald* (:P) einfach sein, die Hefte zu releasen
