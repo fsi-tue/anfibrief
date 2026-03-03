@@ -7,7 +7,7 @@ jobs:
       - name: Checkout the source-code
         uses: actions/checkout@v2
       - name: Setup (Nixpkgs config and NIXPKGS_COMMIT)
-        run: echo "NIXPKGS_COMMIT=$(curl -L 'https://channels.nixos.org/nixos-unstable/git-revision')" >> $GITHUB_ENV
+        run: echo "NIXPKGS_COMMIT=$(curl -L 'https://releases.nixos.org/nixos/24.11/nixos-24.11.719113.50ab793786d9/git-revision')" >> $GITHUB_ENV
       - name: Install Nix
         uses: cachix/install-nix-action@v12
         with:
