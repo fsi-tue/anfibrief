@@ -58,14 +58,19 @@ endif
 all: wintersemester
 
 # A variable that later acts as a user-defined function
-# "(call variable,parameter)"
+# we need a special handling for macOS, because there is no GNU sed
+# DO NOT INDENT THE FOLLOWING LINES!!!
+# this will BREAK FUNCTIONALITY
 ifeq ($(shell uname), Darwin)
-	env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
-		sed -E -i '' 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+define env-replace
+sed -E -i '' 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+endef
 else
-	env-replace = grep --extended-regexp --quiet '^\\newcommand\{\\$(1)\}\{$($(1))\}$$' $(SRCDIR)/env.tex ||\
-		sed -E -i 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
-endif
+define env-replace
+sed -E -i 's/^\\newcommand\{\\$(1)\}\{.*\}$$/\\newcommand\{\\$(1)\}\{$($(1))\}/' $(SRCDIR)/env.tex
+endef
+endif 
+
 
 # A little (possibly dirty) hack to execute the env-update target every time at
 # the beginning. This target updates the LaTeX variables in env.tex but only
@@ -75,10 +80,10 @@ endif
 .PHONY: env-update
 env-update:
 	cp $(SRCDIR)/env.tex.sample $(SRCDIR)/env.tex
-	@$(call env-replace,YEAR)
-	@$(call env-replace,ApplySemester)
-	@$(call env-replace,LETTERDIR)
-	@$(call env-replace,TIMETABLEDIR)
+	$(call env-replace,YEAR)
+	$(call env-replace,ApplySemester)
+	$(call env-replace,LETTERDIR)
+	$(call env-replace,TIMETABLEDIR)
 
 # Mit diesem Target lassen sich die Stundenpläne und der Stadtplan erstellen
 plaene: $(addprefix $(PDFDIR)/,$(addsuffix .pdf,$(PLAENE)))
