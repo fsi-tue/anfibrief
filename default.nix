@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
     (texlive.combine {
       inherit (texlive) scheme-minimal latexmk latexconfig latex latex-bin
         koma-script
-        graphics german xcolor bera collection-fontsrecommended fontawesome
+        graphics german xcolor bera collection-fontsrecommended fontawesome fontawesome5
         geometry oberdiek totpages ms setspace microtype hyphenat pdfpages tools
         url hyperref babel babel-german hyphen-german hycolor atveryend
         epstopdf-pkg pdflscape l3kernel l3packages etoolbox
